@@ -4,7 +4,7 @@ Nombre de proyecto: Aula Virtual.
 Descripcion del proyecto: 
 Este proyecto consiste en la creación de un Aula Virtual enfocado en la enseñanza media. Se concentra en facilitar material de estudio a los estudiantes a través de la facilitación de material de estudio por parte de los docentes. Este contenido varía entre libros de estudio de diferentes materias, textos requeridos comúnmente por asignaturas como lenguaje para futuras pruebas, y textos estudiantiles brindados por el gobierno. Además de brindar contenido en forma de textos, también se pueden habilitar diferentes cuestionarios de variada complejidad, con el fin de reforzar contenidos y conocimientos por parte de los estudiantes.
 
-Link de Figma: https://www.figma.com/design/Y0rmGswyFX12rhXiALOUG7/Proyecto-Aplicacion-Aula-Virtual?m=auto&t=sTPddh5C63eUA2pH-1
+Link de Figma: https://www.figma.com/design/miHd61mOEGG0YY0DoFSG4a/Aula-Virtual?node-id=0-1&t=7nSAswkWyI6TwnRA-1
 
 Integrantes del equipo:
 
