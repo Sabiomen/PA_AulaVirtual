@@ -8,6 +8,8 @@ Este proyecto consiste en la creación de un Aula Virtual enfocado en la enseña
 
 [Link del diseño en Figma](https://www.figma.com/design/miHd61mOEGG0YY0DoFSG4a/Aula-Virtual?node-id=0-1&t=7nSAswkWyI6TwnRA-1)
 
+[Link del prototipo en Figma](https://www.figma.com/proto/miHd61mOEGG0YY0DoFSG4a/Aula-Virtual?node-id=61-1329&t=hSmmCsVPPOUzsWXX-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=103%3A5&show-proto-sidebar=1)
+
 ## Integrantes del Equipo
 
 ### Carlos Moris
