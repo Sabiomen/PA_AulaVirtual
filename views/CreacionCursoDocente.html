@@ -1,26 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creación Curso Docente</title>
 </head>
+
 <body>
     <header>
         <div class="header__container">
-            <img src="assets/logo.png" alt="School Logo">
+            <img src="assets/logo.png" alt="school-logo">
             <a href="views/GestionTextosDocente.html">Biblioteca</a>
             <a href="views/VistaCursoDocente.html">Revisiones</a>
 
-            <section class="user__status">
-                <img src="assets/1&1guy.png" alt="Profile Picture">
-                <img src="assets/logout.png" alt="Log Out">
-            </section>
+            <div class="user__status">
+                <img src="assets/1&1guy.png" alt="profile-picture">
+                <img src="assets/logout.png" alt="log-out">
+            </div>
         </div>
     </header>
 
-    <div class="general__container"></div>
+    <div class="general__container">
+        <div class="course__creation__container">
+            <p class="title">Creación Curso</p>
+            <div class="creation__form__container">
+                <form>
+                    Nombre del Curso
+                    <input type="text" name="course-name">
+                </form>
+                <p>Seleccione Nivel Académico</p>
+                <select name="levels">
+                    <optgroup label="Enseñanza Básica">
+                        <option>1° Básico</option>
+                        <option>2° Básico</option>
+                        <option>3° Básico</option>
+                        <option>4° Básico</option>
+                        <option>5° Básico</option>
+                        <option>6° Básico</option>
+                        <option>7° Básico</option>
+                        <option>8° Básico</option>
+                    </optgroup>
+                    <optgroup label="Enseñanza Media">
+                        <option>1° Medio</option>
+                        <option>2° Medio</option>
+                        <option>3° Medio</option>
+                        <option>4° Medio</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="coursepicture__edit__container">
+                <img src="/assets/course-1.png">
+                <button class="put__button">Subir Foto</button>
+            </div>
+            <div class="actions__container">
+                <button class="delete__button">Cancelar Creación</button>
+                <button class="post__button">Crear Curso</button>
+            </div>
+        </div>
 
+        <div class="blue__line"></div>
     </div>
+
 </body>
+
 </html>
