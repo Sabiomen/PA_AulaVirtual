@@ -1,26 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario Docente</title>
 </head>
+
 <body>
     <header>
         <div class="header__container">
-            <img src="assets/logo.png" alt="School Logo">
+            <img src="assets/logo.png" alt="school-logo">
             <a href="views/GestionTextosDocente.html">Biblioteca</a>
             <a href="views/VistaCursoDocente.html">Revisiones</a>
 
-            <section class="user__status">
-                <img src="assets/1&1guy.png" alt="Profile Picture">
-                <img src="assets/logout.png" alt="Log Out">
-            </section>
+            <div class="user__status">
+                <img src="assets/1&1guy.png" alt="profile-picture">
+                <img src="assets/logout.png" alt="log-out">
+            </div>
         </div>
     </header>
 
-    <div class="general__container"></div>
+    <div class="general__container">
+        <div class="quiz__container">
+            <img src="/assets/return.png" alt="return">
+            <img src="/assets/add-element.png" alt="add-element">
+            <div class="first__question">
+                <img src="/assets/settings.png" alt="settings">
+                <p class="question__text">1.- Si la nariz de Pinocho solo crece al mentir, y Pinocho dice “Mi nariz crecerá” y su nariz crece ¿Ha dicho una mentira o una verdad?</p>
+                <div class="answers__container">
+                    <div class="answer"><input type="checkbox">Alternativa 1</div>
+                    <div class="answer"><input type="checkbox">Alternativa 2</div>
+                    <div class="answer"><input type="checkbox">Alternativa 3</div>
+                    <div class="answer"><input type="checkbox">Alternativa 4</div>
+                </div>
+            </div>
+            <div class="second__question">
+                <img src="/assets/settings.png" alt="settings">
+                <p class="question__text">2.- Si el Universo es infinito ¿Por qué el cielo nocturno no está iluminado?</p>
+                <div class="answers__container">
+                    <div class="answer"><input type="checkbox">Alternativa 1</div>
+                    <div class="answer"><input type="checkbox">Alternativa 2</div>
+                    <div class="answer"><input type="checkbox">Alternativa 3</div>
+                    <div class="answer"><input type="checkbox">Alternativa 4</div>
+                </div>
+            </div>
+        </div>
 
+        <div class="blue__line"></div>
     </div>
+
 </body>
+
 </html>
