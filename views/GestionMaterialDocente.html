@@ -1,26 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion Material Docente</title>
 </head>
+
 <body>
     <header>
         <div class="header__container">
-            <img src="assets/logo.png" alt="School Logo">
+            <img src="assets/logo.png" alt="school-logo">
             <a href="views/GestionTextosDocente.html">Biblioteca</a>
             <a href="views/VistaCursoDocente.html">Revisiones</a>
 
-            <section class="user__status">
-                <img src="assets/1&1guy.png" alt="Profile Picture">
-                <img src="assets/logout.png" alt="Log Out">
-            </section>
+            <div class="user__status">
+                <img src="assets/1&1guy.png" alt="profile-picture">
+                <img src="assets/logout.png" alt="log-out">
+            </div>
         </div>
     </header>
 
-    <div class="general__container"></div>
+    <div class="general__container">
+        <div class="material__container">
+            <img src="/assets/return.png" alt="return">
+            <div class="material__form">
+                <div class="video__form">
+                    <img src="/assets/settings.png" alt="settings">
+                <form>
+                    Nombre de Video
+                    <input type="text" name="video__name">
+                    Link de Video
+                    <input type="text" name="video__link">
+                </form>
+            </div>
+            <div class="pdf__form">
+                <img src="/assets/settings.png" alt="settings">
+                <form>
+                    Nombre del Archivo
+                    <input type="text" name="file__name">
+                    Archivo PDF
+                    <input type="file" name="file__upload">
+                </form>
+            </div>
+            </div>
+        </div>
+        <div class="blue__line"></div>
+
 
     </div>
 </body>
+
 </html>
