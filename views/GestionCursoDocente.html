@@ -1,26 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion Curso Docente</title>
 </head>
+
 <body>
     <header>
         <div class="header__container">
-            <img src="assets/logo.png" alt="School Logo">
+            <img src="assets/logo.png" alt="school-logo">
             <a href="views/GestionTextosDocente.html">Biblioteca</a>
             <a href="views/VistaCursoDocente.html">Revisiones</a>
 
-            <section class="user__status">
-                <img src="assets/1&1guy.png" alt="Profile Picture">
-                <img src="assets/logout.png" alt="Log Out">
-            </section>
+            <div class="user__status">
+                <img src="assets/1&1guy.png" alt="profile-picture">
+                <img src="assets/logout.png" alt="log-out">
+            </div>
         </div>
     </header>
 
-    <div class="general__container"></div>
-
+    <div class="general__container">
+        <div class="course__edition__container">
+            <p class="title">Gestión Curso</p>
+            <div class="course__edition__form">
+                <form>
+                    Nombre del Curso
+                    <input type="text" name="course-new-name">
+                </form>
+            </div>
+            <div class="coursenewpicture__edit__container">
+                <img src="/assets/course-2.png" alt="course-new-picture">
+                <button class="put__button">Subir Foto</button>
+            </div>
+            <div class="actions__container">
+                <button class="delete__button">Descartar Cambios</button>
+                <button class="post__button">Guardar Cambios</button>
+            </div>
+        </div>
+        <div class="blue__line"></div>
     </div>
+
 </body>
+
 </html>
