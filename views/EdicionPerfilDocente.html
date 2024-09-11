@@ -5,41 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edición Perfil Docente</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
     <header>
+        <a href="/PrincipalDocente.html">
+            <img class="logo" src="/assets/logo.png" alt="school-logo">
+        </a>
         <div class="header__container">
-            <img src="assets/logo.png" alt="school-logo">
-            <a href="views/GestionTextosDocente.html">Biblioteca</a>
-            <a href="views/VistaCursoDocente.html">Revisiones</a>
-
-            <div class="user__status">
-                <img src="assets/1&1guy.png" alt="profile-picture">
-                <img src="assets/logout.png" alt="log-out">
-            </div>
+            <a href="GestionTextosDocente.html">Biblioteca</a>
+            <a href="VistaCursoDocente.html">Revisiones</a>
+        </div>
+        <div class="user__status">
+            <a href="PerfilDocente.html">
+                <img src="/assets/1&1guy.png" alt="profile-picture" id="profile-picture">
+            </a>
+            <a href="Login.html">
+                <img src="/assets/logout.png" alt="log-out" id="log-out">
+            </a>
         </div>
     </header>
 
     <div class="general__container">
-        <div class="edition__container">
+        <div class="card__container center__content">
+            <div></div>
+            <div class="row__width">
             <div class="profilepicture__edit__container">
-                <img src="/assets/1&1guy.png" alt="profile-picture">
-                <button>Subir Foto</button>
-                <img src="/assets/edit-image.png" alt="edit-picture">
+                <img class="profile__pic" src="/assets/1&1guy.png" alt="profile-picture">
+                <div class="icon__tile">
+                    <button class="put__button">Subir Foto</button>
+                    <img class="icon" src="/assets/edit-image.png" alt="edit-picture">
+                </div>
             </div>
             <div class="profile__edition__form__container">
-                <form>
+                <form class="list__container">
                     Nueva Contraseña
-                    <input type="password" name="password">
+                    <input class="text__input" type="password" name="password">
                 </form>
-                <form>
+                <form class="list__container">
                     Confirmar Nueva Contraseña
-                    <input type="password" name="nuevaContraseña" </form>
+                    <input class="text__input" type="password" name="nuevaContraseña" </form>
             </div>
+            <div style="width: 80px;"></div> <!-- This is a Spacer!! -->
+        </div>
+
             <div class="actions__container">
-                <button class="delete__button">Descartar Cambios</button>
-                <button class="post__button">Guardar Cambios</button>
+                <button class="delete__button"><a href="PerfilDocente.html">Descartar Cambios</a></button>
+                <button class="post__button"><a href="PerfilDocente.html">Guardar Cambios</a></button>
             </div>
         </div>
 

@@ -1,26 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion Textos Docente</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
     <header>
+        <a href="/PrincipalDocente.html">
+            <img class="logo" src="/assets/logo.png" alt="school-logo">
+        </a>
         <div class="header__container">
-            <img src="assets/logo.png" alt="School Logo">
-            <a href="views/GestionTextosDocente.html">Biblioteca</a>
-            <a href="views/VistaCursoDocente.html">Revisiones</a>
-
-            <section class="user__status">
-                <img src="assets/1&1guy.png" alt="Profile Picture">
-                <img src="assets/logout.png" alt="Log Out">
-            </section>
+            <a href="GestionTextosDocente.html">Biblioteca</a>
+            <a href="VistaCursoDocente.html">Revisiones</a>
+        </div>
+        <div class="user__status">
+            <a href="PerfilDocente.html">
+                <img src="/assets/1&1guy.png" alt="profile-picture" id="profile-picture">
+            </a>
+            <a href="Login.html">
+                <img src="/assets/logout.png" alt="log-out" id="log-out">
+            </a>
         </div>
     </header>
 
-    <div class="general__container"></div>
-
+    <div class="general__container">
+        <div class="card__container">
+            <div class="options">
+            <img class="icon" src="/assets/return.png" alt="return">
+            <p class="title semibold">Biblioteca Virtual</p>
+            <div></div>
+            </div>
+            <div class="column__format">
+                <div class="section__title">
+                    <h2>Últimas Entradas</h2>
+                </div>
+                <div class="row">
+                    <div class="book__card">
+                        <img class="book__cover" src="/assets/book-1.jpeg" alt="book">
+                        <div class="book__card__content">
+                            <p class="semibold">Fahrenheit 451</p>
+                            <p class="subject">Ray Bradbury</p>
+                            <p class="icon__tile"><img class="icon" src="/assets/pdf-file.png">Descargar PDF</p>
+                            <p class="icon__tile"><img class="icon" src="/assets/view-file.png">Leer Entrada</p>
+                        </div>
+                    </div>
+                    <div class="book__card">
+                        <img class="book__cover" src="/assets/book-2.webp" alt="book">
+                        <div class="book__card__content">
+                            <p class="semibold">Colmillo Blanco</p>
+                            <p class="subject">Jack London</p>
+                            <p class="icon__tile"><img class="icon" src="/assets/pdf-file.png">Descargar PDF</p>
+                            <p class="icon__tile"><img class="icon" src="/assets/view-file.png">Leer Entrada</p>
+                        </div>
+                    </div>
+                    <div class="book__card">
+                        <img class="book__cover" src="/assets/book-3.webp" alt="book">
+                        <div class="book__card__content">
+                            <p class="semibold">Un Mundo Feliz</p>
+                            <p class="subject">Aldous Huxley</p>
+                            <p class="icon__tile"><img class="icon" src="/assets/pdf-file.png">Descargar PDF</p>
+                            <p class="icon__tile"><img class="icon" src="/assets/view-file.png">Leer Entrada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column__format">
+                <div class="section__title">
+                    <h2>Historia, Geografía y Ciencias Sociales</h2>
+                </div>
+                <div class="row">
+                    <div class="book__card">
+                        <img class="book__cover" src="/assets/book-4.jpg" alt="book">
+                        <div class="book__card__content">
+                            <p class="semibold">Frankenstein</p>
+                            <p class="subject">Mary Shelley</p>
+                            <p class="icon__tile"><img class="icon" src="/assets/pdf-file.png">Descargar PDF</p>
+                            <p class="icon__tile"><img class="icon" src="/assets/view-file.png">Leer Entrada</p>
+                        </div>
+                    </div>
+                    <div class="book__card">
+                        <img class="book__cover" src="/assets/book-5.jpg" alt="book">
+                        <div class="book__card__content">
+                            <p class="semibold">Don Quijote de la Mancha</p>
+                            <p class="subject">Miguel de Cervantes</p>
+                            <p class="icon__tile"><img class="icon" src="/assets/pdf-file.png">Descargar PDF</p>
+                            <p class="icon__tile"><img class="icon" src="/assets/view-file.png">Leer Entrada</p>
+                        </div>
+                    </div>
+                    <div class="book__card">
+                        <img class="book__cover" src="/assets/book-6.webp" alt="book">
+                        <div class="book__card__content">
+                            <p class="semibold">Drácula</p>
+                            <p class="subject">Bram Stoker</p>
+                            <p class="icon__tile"><img class="icon" src="/assets/pdf-file.png">Descargar PDF</p>
+                            <p class="icon__tile"><img class="icon" src="/assets/view-file.png">Leer Entrada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column__format">
+                <div class="section__title">
+                    <h2>Geografía, Historia, y Ciencias Sociales</h2>
+                </div>
+                <div class="row">
+                    <div class="book__card">
+                        <img class="book__cover" src="/assets/book-1.jpeg" alt="book">
+                        <div class="book__card__content">
+                            <p class="semibold">Fahrenheit 451</p>
+                            <p class="subject">Ray Bradbury</p>
+                            <p class="icon__tile"><img class="icon" src="/assets/pdf-file.png">Descargar PDF</p>
+                            <p class="icon__tile"><img class="icon" src="/assets/view-file.png">Leer Entrada</p>
+                        </div>
+                    </div>
+                    <div class="book__card">
+                        <img class="book__cover" src="/assets/book-2.webp" alt="book">
+                        <div class="book__card__content">
+                            <p class="semibold">Colmillo Blanco</p>
+                            <p class="subject">Jack London</p>
+                            <p class="icon__tile"><img class="icon" src="/assets/pdf-file.png">Descargar PDF</p>
+                            <p class="icon__tile"><img class="icon" src="/assets/view-file.png">Leer Entrada</p>
+                        </div>
+                    </div>
+                    <div class="book__card">
+                        <img class="book__cover" src="/assets/book-3.webp" alt="book">
+                        <div class="book__card__content">
+                            <p class="semibold">Un Mundo Feliz</p>
+                            <p class="subject">Aldous Huxley</p>
+                            <p class="icon__tile"><img class="icon" src="/assets/pdf-file.png">Descargar PDF</p>
+                            <p class="icon__tile"><img class="icon" src="/assets/view-file.png">Leer Entrada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blue__line"></div>
     </div>
 </body>
+
 </html>
