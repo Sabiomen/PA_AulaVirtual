@@ -94,7 +94,7 @@ footer {
 }
 
 .profile-icon img{
-    width: 40px;
+    width: 45px;
     height: auto;
     border-radius: 100%;
 }
@@ -104,7 +104,7 @@ footer {
 }
 
 .logout-icon img {
-    width: 40px;
+    width: 45px;
     height: auto;
     padding-right: 10px;
     border-radius: 0%;
@@ -283,7 +283,7 @@ main.principal-alumno-main {
     margin: auto; 
 }
 
-.mini-header {
+.course-header {
     display: flex;
     align-items: center;
     border-bottom: 2px solid #E8E8E8; 
@@ -315,6 +315,8 @@ main.principal-alumno-main {
     display: flex;
     align-items: flex-start;
     margin-bottom: 20px;
+    text-decoration: none;
+    color: black;
 }
 
 .content-icon img {
@@ -328,3 +330,87 @@ main.principal-alumno-main {
 }
 
 /* Seccion de PerfilAlumno */
+
+.profile-card {
+    width: 80%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+    margin: auto;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.info-row img {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.enrolled-subjects {
+    width: 30%; 
+    padding-left: 0; 
+    padding-top: 20px;
+    margin: 0;
+}
+
+
+.enrolled-subjects h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.enrolled-subjects ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.enrolled-subjects ul li {
+    margin-bottom: 10px;
+}
+
+.edit-icon {
+    display: flex;
+    position: absolute;
+}
+
+.edit-icon img {
+    width: 30px;
+    height: auto;
+    position: absolute;
+    left: 750px;
+    bottom: 20px;
+}
+
+.profile-little-icon img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
