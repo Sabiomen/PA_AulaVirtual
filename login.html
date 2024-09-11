@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function validarLogin(event) {
+            event.preventDefault(); 
+            
+            const rut = document.getElementById('rut').value;
+            const password = document.getElementById('password').value;
+            
+            if (rut === '214001091' && password === '214001091') {
+                window.location.href = '/views/principalAlumno.html';
+            } else if (rut === '7879439635' && password === '7879439635')
+            {
+                window.location.href = '/views/principalDocente.html';
+            } else {
+                alert('RUT o contraseña incorrectos');
+            }
+        }
+    </script>
+</head>
+<body class="login-body">
+  <header>
+        <a href="Login.html" class="logo">
+            <img src="assets/logo_forlife.png" alt="Logo Escuela For Life">
+        </a>
+        <a href="Login.html" class="login-section">
+            <span><strong>Login</strong></span>
+            <i class="login-icon"><img src="assets/icono.jpg" alt="Icono login"></i>
+        </a>
+    </header>
+
+    <main class="login-main">  
+        <h1>Login</h1>
+        <form onsubmit="validarLogin(event)">
+            <div class="form-group">
+                <h2>RUT</h2>
+                <div class="input-container">
+                    <input type="text" id="rut" name="rut" placeholder="Ingresa tu RUT">
+                </div>
+            </div>
+            <div class="form-group">
+                <h2>Contraseña</h2>
+                <div class="input-container">
+                    <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña">
+                </div>
+            </div>
+            <button type="submit">Entrar</button>
+        </form>
+    </main>
+    
+<footer></footer>
+    <div class="rectangle-container">
+        <div class="triangle-right"></div>
+    </div>
+</footer>
+</body>
+</html>
