@@ -1,9 +1,11 @@
+
 body {
     font-family: Arial, sans-serif;
     background-color: white;
     margin: 0;
     padding: 0;
 }
+
 
 header {
     width: 100%;
@@ -13,7 +15,6 @@ header {
     align-items: center;
     padding: 10px 20px;
     background-color: white;
-    border-bottom: 1px solid #ccc;
 }
 
 .logo {
@@ -26,6 +27,7 @@ header {
     align-items: center;
     padding-left: 10px;
 }
+
 .nav-links {
     flex: 1;
     display: flex;
@@ -36,6 +38,54 @@ header {
 .nav-links a {
     text-decoration: none;
     color: black;
+    padding: 20px 30px;
+    font-size: 20px;
+}
+
+.profile-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.profile-icon {
+    font-size: 20px;
+    padding-right: 50px;
+}
+
+.profile-icon img{
+    width: 40px;
+    height: auto;
+    border-radius: 100%;
+}
+.logout-icon {
+    font-size: 20px;
+    padding-right: 50px;
+}
+
+.logout-icon img {
+    width: 40px;
+    height: auto;
+    padding-right: 10px;
+    border-radius: 0%;
+}
+.login-body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.login-main {
+    text-align: center;
+    margin-top: 50px;
+    margin-top: 20px;
+}
+.login-main h2 { 
+    font-size: 16px;
+    flex-shrink: 0; 
+
+    width: 100px; 
 }
 
 .login-section {
@@ -57,41 +107,53 @@ header {
     padding-right: 50px;
 }
 
-.login-icon img{
+.login-icon img {
     width: 60px;
     height: auto;
     padding-right: 10px;
+    border-radius: 0%;
 }
-
 
 main {
     text-align: center;
     margin-top: 50px;
+    padding: 20px;
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 24px;
     margin-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+    width: 480px; 
+}
+
+.form-group h2 {
+    font-size: 16px;
+    width: 100px; 
+    margin-right: 30px; 
+    text-align: left;
 }
 
 .input-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px auto;
-    width: 300px;
-    position: relative;
-}
-
-.input-container label {
-    position: absolute;
-    left: 10px;
+    flex-grow: 1;
 }
 
 .input-container input {
-    width: 100%;
-    padding: 10px;
-    padding-left: 100px;
+    width: 100%; 
+    padding: 12px;
     border-radius: 20px;
     border: 1px solid #ccc;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -104,29 +166,32 @@ h1 {
 
 button {
     padding: 10px 30px;
+    width: 200px;
     border: none;
     border-radius: 20px;
     background-color: #0E86D4;
     color: white;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 button:hover {
-    background-color: #0E86D4;
+    background-color: #095a8f;
 }
 
+footer {
+    margin-top: 100px; 
+}
 
 .rectangle-container {
-    width: 60%; 
-    height: 50px;
+    width: 60%;
+    height: 120px;
     background-color: #0E86D4;
     position: relative;
-    margin-top: 50px;
-    margin-left: 0; 
+    margin-top: 10px;
+    margin-left: 0;
 }
-
 
 .triangle-right {
     position: absolute;
@@ -134,8 +199,120 @@ button:hover {
     left: 100%;
     width: 0;
     height: 0;
-    border-top: 51px solid transparent;
+    border-top: 120px solid transparent;
     border-left: 50px solid #0E86D4;
+}
+
+body.principal-alumno-body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+main.principal-alumno-main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 20px;
+    justify-items: center;
+    padding: 50px 20px;
+}
+
+.class-card {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    height: 100px;
+    gap: 15px; 
+    text-decoration: none;
+    color: black;
+}
+
+.class-logo img {
+    width: 100px;
+    height: auto;
+    margin-right: 30px;
+    border-radius: 20px;
+}
+
+
+.class-card img {
+    width: 150px;
+    height: 120px;
+    border-radius: 10px;
+}
+
+.class-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px; 
     
 }
 
+.class-info h2 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.class-info p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.course-card {
+    width: 80%;
+    max-width: 1200px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding: 20px;
+    margin-bottom: 60px; 
+}
+
+.mini-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.back-button img {
+    width: 30px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.course-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-column, .right-column {
+    width: 48%;
+}
+
+.left-column h3, .right-column h3 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.content-section {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.content-icon img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.content-text p {
+    margin: 0;
+}
