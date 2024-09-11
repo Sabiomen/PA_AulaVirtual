@@ -1,4 +1,4 @@
-
+ /* Estaticos / Default para todas las vistas */
 body {
     font-family: Arial, sans-serif;
     background-color: white;
@@ -17,6 +17,19 @@ header {
     background-color: white;
 }
 
+main {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+
 .logo {
     flex: 1;
 }
@@ -27,6 +40,32 @@ header {
     align-items: center;
     padding-left: 10px;
 }
+
+footer {
+    margin-top: 100px; 
+}
+
+.rectangle-container {
+    width: 60%;
+    height: 120px;
+    background-color: #0E86D4;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 0;
+}
+
+.triangle-right {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border-top: 120px solid transparent;
+    border-left: 50px solid #0E86D4;
+}
+
+
+/* Barra para usuario Alumno logeado */
 
 .nav-links {
     flex: 1;
@@ -70,6 +109,8 @@ header {
     padding-right: 10px;
     border-radius: 0%;
 }
+
+/* Seccion de Login */
 .login-body {
     background-color: white;
     margin: 0;
@@ -112,18 +153,6 @@ header {
     height: auto;
     padding-right: 10px;
     border-radius: 0%;
-}
-
-main {
-    text-align: center;
-    margin-top: 50px;
-    padding: 20px;
-}
-
-h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    margin-bottom: 40px;
 }
 
 form {
@@ -180,29 +209,7 @@ button:hover {
     background-color: #095a8f;
 }
 
-footer {
-    margin-top: 100px; 
-}
-
-.rectangle-container {
-    width: 60%;
-    height: 120px;
-    background-color: #0E86D4;
-    position: relative;
-    margin-top: 10px;
-    margin-left: 0;
-}
-
-.triangle-right {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 0;
-    height: 0;
-    border-top: 120px solid transparent;
-    border-left: 50px solid #0E86D4;
-}
-
+/* Seccion de PrincipalAlumno */
 body.principal-alumno-body {
     background-color: white;
     margin: 0;
@@ -264,20 +271,23 @@ main.principal-alumno-main {
     margin: 0;
 }
 
+/* Seccion de CursoAlumno */
 .course-card {
     width: 80%;
     max-width: 1200px;
-    background-color: #f9f9f9;
+    background-color: white;
     border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
     padding: 20px;
-    margin-bottom: 60px; 
+    margin: auto; 
 }
 
 .mini-header {
     display: flex;
     align-items: center;
+    border-bottom: 2px solid #E8E8E8; 
+    padding-bottom: 10px;
     margin-bottom: 20px;
 }
 
@@ -316,3 +326,5 @@ main.principal-alumno-main {
 .content-text p {
     margin: 0;
 }
+
+/* Seccion de PerfilAlumno */
