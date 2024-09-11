@@ -13,7 +13,7 @@
         </a>
         <nav class="nav-links">
             <a href="BibliotecaAlumno.html"><strong>Biblioteca</strong></a>
-            <a href="PrincipalAlumno.html"><strong>Pendientes</strong></a>
+            <a href="CursoAlumno.html"><strong>Pendientes</strong></a>
         </nav>
         <a href="PerfilAlumno.html" class="profile-section">
             <i class="profile-icon"><img src="/assets/hagger.jpg" alt="Foto de perfil"></i>
@@ -23,13 +23,34 @@
         </a>
     </header>
 
+    <main>
+        <div class="edit-profile-card">
+            <div class="edit-profile-header">
+                <div class="left-section">
+                    <img src="/assets/hagger.jpg" alt="Foto de Perfil" class="edit-profile-picture">
+                    <div class="profile-upload">
+                        <button class="upload-photo-button">Subir Foto</button>
+                        <div class="small-icon">
+                            <img src="/assets/edit-image.png" alt="Icono pequeño">
+                        </div>
+                    </div>
+                </div>
 
+                <form class="edit-form">
+                    <label for="new-password">Nueva Contraseña:</label>
+                    <input type="password" id="new-password" name="new-password" placeholder="Contraseña...">
 
-<main>
-    
+                    <label for="confirm-password">Confirmar Contraseña:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Contraseña...">
+                </form>
+            </div>
 
-
-</main>
+            <div class="form-buttons">
+                <button type="button" class="discard-button"> <a href="EdicionPerfilAlumno.html" class="discard-button-ref">Descartar Cambios</a></button>
+                <button type="button" class="save-button"><a href="PrincipalAlumno.html" class="save-button-ref">Guardar Cambios</a></button>
+            </div>
+        </div>
+    </main>
 
 <footer>
     <div class="rectangle-container">
