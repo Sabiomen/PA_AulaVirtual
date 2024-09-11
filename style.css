@@ -655,3 +655,114 @@ main.principal-alumno-main {
 .finish-button:hover {
     background-color: #0d6efd;
 }
+
+/* Seccion de BibliotecaAlumno */
+
+.library-card {
+    width: 80%;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.library-card .top-left-icon {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+}
+
+.title-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.new-entries, .subject-section {
+    margin-top: 30px;
+}
+
+.new-entries h2, .subject-section h2 {
+    margin-bottom: 20px;
+}
+
+.entry-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+}
+
+.entry-item {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.entry-item img {
+    width: 120px; 
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.entry-info {
+    margin-left: 15px;
+    flex: 1;
+}
+
+.entry-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.entry-actions img {
+    width: 30px;
+    height: 30px;
+
+}
+
+.filter-column {
+    width: 200px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 2px solid #ddd;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right:-200px; 
+    top: 20px; 
+    height: 898px; 
+}
+
+.filter-column h2 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.filter-options {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filter-options li {
+    margin-bottom: 10px;
+}
+
+
+.divider {
+    width: 2px; 
+    background-color: #ddd;
+    position: absolute;
+    top: 20px;
+    right:-200px;
+    height: 898px; 
+}
