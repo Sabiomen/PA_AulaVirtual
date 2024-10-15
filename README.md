@@ -1,52 +1,29 @@
-# Aula Virtual
+# avance_3
 
-## Descripción del Proyecto
+This template should help get you started developing with Vue 3 in Vite.
 
-Este proyecto consiste en la creación de un Aula Virtual enfocado en la enseñanza media y básica. Se concentra en facilitar material de estudio a los estudiantes a través de la facilitación de material de estudio por parte de los docentes y la institución. Este contenido varía entre libros de estudio de diferentes materias, textos requeridos comúnmente por asignaturas como lenguaje para futuras pruebas, y textos estudiantiles brindados por el gobierno. Además de brindar contenido en forma de textos, también se pueden habilitar diferentes cuestionarios de variada complejidad, como también archivos PDF y videos de Youtube con el fin de reforzar contenidos y conocimientos por parte de los estudiantes.
+## Recommended IDE Setup
 
-## Link de Figma
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-[Link del diseño en Figma](https://www.figma.com/design/miHd61mOEGG0YY0DoFSG4a/Aula-Virtual?node-id=0-1&t=7nSAswkWyI6TwnRA-1)
+## Customize configuration
 
-[Link del prototipo en Figma](https://www.figma.com/proto/miHd61mOEGG0YY0DoFSG4a/Aula-Virtual?node-id=61-1329&t=hSmmCsVPPOUzsWXX-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=103%3A5&show-proto-sidebar=1)
+See [Vite Configuration Reference](https://vite.dev/config/).
 
-## Integrantes del Equipo
+## Project Setup
 
-### Carlos Moris
+```sh
+npm install
+```
 
-**Tipo de Usuario:** Estudiante
+### Compile and Hot-Reload for Development
 
-**Funcionalidades:**
+```sh
+npm run dev
+```
 
-- Inicio de sesión
-- Cierre de sesión
-- Edición de perfil
-- Vista de cursos inscritos
-- Vista de formularios
-- Responder formularios
-- Vista de biblioteca
-- Filtrado de textos en base a lo requerido por los cursos
-- Filtrado de textos en base al tipo de texto (Estudiantil, Lectura casual, Estudio)
-- Vista de textos
-- Descarga de textos en formato PDF
+### Compile and Minify for Production
 
-### Sebastian Avila
-
-**Tipo de Usuario:** Docente
-
-**Funcionalidades:**
-
-- Inicio de sesión
-- Cierre de sesión
-- Edición de perfil
-- Creación de cursos
-- Inscripción de alumnos en curso
-- Borrar alumnos de curso
-- Vista de cursos creados
-- Modificación de cursos creados
-- Asignar textos requeridos por el curso
-- Habilitación e inhabilitación de textos extra
-- Habilidad de insertar videos en curso
-- Creación de formularios
-- Modificación de formularios
-- Eliminación de formularios
+```sh
+npm run build
+```
