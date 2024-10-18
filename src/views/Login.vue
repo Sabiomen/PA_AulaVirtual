@@ -1,8 +1,4 @@
 <template>
-    <head>
-         <title>Inicio de Sesión</title>
-    </head>
-
     <body class="login-body">
   <header>
         <a href="Login.vue" class="logo">
