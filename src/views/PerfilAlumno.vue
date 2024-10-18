@@ -1,25 +1,28 @@
 <template>
 <body class="principal-alumno-body">
+    <HeaderAlumno/>
+    
     <main>
         <div class="profile-card">
             <div class="profile-header">
-                <img src="/PA_Avance-AulaVirtual/assets/hagger.jpg" alt="Foto de Perfil" class="profile-picture">
+                <img src="../assets/hagger.jpg" alt="Foto de Perfil" class="profile-picture">
                 <div class="profile-info">
                     <div class="info-row">
                         <strong>Alejandro David Prieto Moreno</strong>
                     </div>
                     <div class="info-row">
-                        <img src="/PA_Avance-AulaVirtual/assets/graduation-cap.png" alt="Icono rol usuario" class="profile-little-icon">
+                        <img src="../assets/graduation-cap.png" alt="Icono rol usuario" class="profile-little-icon">
                         Alumno
                     </div>
                     <div class="info-row">
-                        <img src="/PA_Avance-AulaVirtual/assets/book-and-pencil.png" alt="Icono nivel educativo" class="profile-little-icon">
+                        <img src="../assets/book-and-pencil.png" alt="Icono nivel educativo" class="profile-little-icon">
                         2° Medio
                     </div>
                 </div>
-                <a href="EdicionPerfilAlumno.html" class="edit-icon">
-                    <img src="/PA_Avance-AulaVirtual/assets/settings.png" alt="Icono edición">
-                </a>
+
+                <router-link to="/Perfil/Editar" class="edit-icon">
+                    <img src="../assets/settings.png" alt="Icono Edicion">
+                </router-link>
             </div>
 
             <div class="enrolled-subjects">
@@ -43,8 +46,13 @@
 
 </body>
 
-
 </template>
+
+<script setup>
+import HeaderAlumno from '../components/HeaderAlumno.vue';
+
+
+</script>
 
 <style scoped>
 .profile-card {

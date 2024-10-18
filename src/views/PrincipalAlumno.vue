@@ -2,47 +2,46 @@
 
 <body class="principal-alumno-body">
 
+    <HeaderAlumno/>
 
-
-
-    
     <main class="principal-alumno-main">
 
-<div class="class-card">
-    <img src="/PA_Avance-AulaVirtual/assets/course-1.png" alt="Logo Clase 1">
-    <div class="class-info">
-        <h2>Historia y Geografía</h2>
-        <p>Prof. Erica Worthington</p>
-        <p>2° Medio</p>
-    </div>
-</div>
+<router-link to="/Cursos/Historia" class="class-card">
+  <img src="../assets/course-1.png" alt="Logo Clase 1">
+  <div class="class-info">
+    <h2>Historia y Geografía</h2>
+    <p>Prof. Erica Worthington</p>
+    <p>2° Medio</p>
+  </div>
+</router-link>
 
-<div class="class-card">
-    <img src="/PA_Avance-AulaVirtual/assets/course-2alt.png" alt="Logo Clase 2">
-    <div class="class-info">
-        <h2>Matematica y Estadistica</h2>
-        <p>Prof. Richard Hanson</p>
-        <p>2° Medio</p>
-    </div>
-</div>
+<router-link to="/Cursos/Matematica" class="class-card">
+  <img src="../assets/course-2alt.png" alt="Logo Clase 2">
+  <div class="class-info">
+    <h2>Matematica y Estadistica</h2>
+    <p>Prof. Richard Hanson</p>
+    <p>2° Medio</p>
+  </div>
+</router-link>
 
-<a href="CursoAlumno.html"  class="class-card">
-    <img src="/PA_Avance-AulaVirtual/assets/course-3.png" alt="Logo Clase 3">
-    <div class="class-info">
-        <h2>Ciencias Sociales</h2>
-        <p>Prof. Frederick Fitzgerald Fazbearington</p>
-        <p>2° Medio</p>
-    </div>
-</a>
+<router-link to="/Cursos/Ciencias" class="class-card">
+  <img src="../assets/course-3.png" alt="Logo Clase 3">
+  <div class="class-info">
+    <h2>Ciencias Sociales</h2>
+    <p>Prof. Frederick Fitzgerald Fazbearington</p>
+    <p>2° Medio</p>
+  </div>
+</router-link>
 
-<div class="class-card">
-    <img src="/PA_Avance-AulaVirtual/assets/course-4.png" alt="Logo Clase 4">
-    <div class="class-info">
-        <h2>Ingles</h2>
-        <p>Prof. Chelsey Addams</p>
-        <p>2° Medio</p>
-    </div>
-</div>
+<router-link to="Cursos/Ingles" class="class-card">
+  <img src="../assets/course-4.png" alt="Logo Clase 4">
+  <div class="class-info">
+    <h2>Ingles</h2>
+    <p>Prof. Chelsey Addams</p>
+    <p>2° Medio</p>
+  </div>
+</router-link>
+
 </main>
 
 <footer>
@@ -54,6 +53,12 @@
 </body>
 
 </template>
+
+<script setup>
+import HeaderAlumno from '../components/HeaderAlumno.vue';
+
+
+</script>
 
 <style scoped>
 body.principal-alumno-body {

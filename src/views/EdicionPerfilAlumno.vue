@@ -1,15 +1,17 @@
 <template>
  <body class="principal-alumno-body">
 
+    <HeaderAlumno/>
+
     <main>
         <div class="edit-profile-card">
             <div class="edit-profile-header">
                 <div class="left-section">
-                    <img src="/PA_Avance-AulaVirtual/assets/hagger.jpg" alt="Foto de Perfil" class="edit-profile-picture">
+                    <img src="../assets/hagger.jpg" alt="Foto de Perfil" class="edit-profile-picture">
                     <div class="profile-upload">
                         <button class="upload-photo-button">Subir Foto</button>
                         <div class="small-icon">
-                            <img src="/PA_Avance-AulaVirtual/assets/edit-image.png" alt="Icono pequeño">
+                            <img src="../assets/edit-image.png" alt="Icono pequeño">
                         </div>
                     </div>
                 </div>
@@ -24,12 +26,11 @@
             </div>
 
             <div class="form-buttons">
-                <button type="button" class="discard-button"> <a href="EdicionPerfilAlumno.html" class="discard-button-ref">Descartar Cambios</a></button>
-                <button type="button" class="save-button"><a href="PrincipalAlumno.html" class="save-button-ref">Guardar Cambios</a></button>
+                <button type="button" class="discard-button"> <router-link to="/Perfil/Editar" class="discard-button-ref">Descartar Cambios</router-link></button>
+                <button type="button" class="save-button"><router-link to="/Cursos"  class="save-button-ref">Guardar Cambios</router-link></button>
             </div>
         </div>
     </main>
-
 <footer>
     <div class="rectangle-container">
         <div class="triangle-right"></div>
@@ -40,6 +41,11 @@
 
 </template>
 
+<script setup>
+import HeaderAlumno from '../components/HeaderAlumno.vue';
+
+
+</script>
 <style scoped>
 .edit-profile-card {
     width: 80%;
@@ -100,6 +106,7 @@
 .small-icon img {
     width: 30px;
     height: 30px;
+    margin-bottom: 15px;
 }
 
 .edit-form {

@@ -1,14 +1,14 @@
 <template>
      <body class="principal-alumno-body">
 
+        <HeaderAlumno/>
 
-        
         <main>
         <div class="library-card">
             <div class="top-left-icon">
-                <a href="PrincipalAlumno.html">
-                    <img src="/PA_Avance-AulaVirtual/assets/return.png" alt="Regresar">
-                </a>
+                <router-link to="/Cursos">
+                    <img src="../assets/return.png" alt="Regresar">
+                </router-link>
             </div>
             <div class="title-section">
                 <h1>Biblioteca Virtual</h1>
@@ -19,40 +19,40 @@
                     <h2>Nuevas Entradas</h2>
                     <div class="entry-grid">
                         <div class="entry-item">
-                            <img src="/PA_Avance-AulaVirtual/assets/farenheit.png" alt="Entrada 1">
+                            <img src="../assets/farenheit.png" alt="Entrada 1">
                             <div class="entry-info">
                                 <p><strong>Farenheit 451</strong></p>
                                 <p>Ray Bradbury</p>
                                 <div class="entry-actions">
-                                    <img src="/PA_Avance-AulaVirtual/assets/pdf-file.png" alt="icono pdf">
+                                    <img src="../assets/pdf-file.png" alt="icono pdf">
                                     <p><strong>Descargar PDF</strong></p>
-                                    <img src="/PA_Avance-AulaVirtual/assets/fileread.png" alt="icono leer archivo">
+                                    <img src="../assets/fileread.png" alt="icono leer archivo">
                                     <p><strong>Leer Entrada</strong></p>
                                 </div>
                             </div>
                         </div>
                         <div class="entry-item">
-                            <img src="/PA_Avance-AulaVirtual/assets/colmilloblanco.png" alt="Entrada 2">
+                            <img src="../assets/colmilloblanco.png" alt="Entrada 2">
                             <div class="entry-info">
                                 <p><strong>Colmillo Blanco</strong></p>
                                 <p>Jack London</p>
                                 <div class="entry-actions">
-                                    <img src="/PA_Avance-AulaVirtual/assets/pdf-file.png" alt="icono pdf">
+                                    <img src="../assets/pdf-file.png" alt="icono pdf">
                                     <p><strong>Descargar PDF</strong></p>
-                                    <img src="/PA_Avance-AulaVirtual/assets/fileread.png" alt="icono leer archivo">
+                                    <img src="../assets/fileread.png" alt="icono leer archivo">
                                     <p><strong>Leer Entrada</strong></p>
                                 </div>
                             </div>
                         </div>
                         <div class="entry-item">
-                            <img src="/PA_Avance-AulaVirtual/assets/unmundofeliz.png" alt="Entrada 3">
+                            <img src="../assets/unmundofeliz.png" alt="Entrada 3">
                             <div class="entry-info">
                                 <p><strong>Un Mundo Feliz</strong></p>
                                 <p>Aldous Huxley</p>
                                 <div class="entry-actions">
-                                    <img src="/PA_Avance-AulaVirtual/assets/pdf-file.png" alt="icono pdf">
+                                    <img src="../assets/pdf-file.png" alt="icono pdf">
                                     <p><strong>Descargar PDF</strong></p>
-                                    <img src="/PA_Avance-AulaVirtual/assets/fileread.png" alt="icono leer archivo">
+                                    <img src="../assets/fileread.png" alt="icono leer archivo">
                                     <p><strong>Leer Entrada</strong></p>
                                 </div>
                             </div>
@@ -66,40 +66,40 @@
                     <h2>Historia, Geografía y Ciencias Sociales</h2>
                     <div class="entry-grid">
                         <div class="entry-item">
-                            <img src="/PA_Avance-AulaVirtual/assets/frankenstein.png" alt="Entrada 4">
+                            <img src="../assets/frankenstein.png" alt="Entrada 4">
                             <div class="entry-info">
                                 <p><strong>Frankenstein</strong></p>
                                 <p>Mary Shelley</p>
                                 <div class="entry-actions">
-                                    <img src="/PA_Avance-AulaVirtual/assets/pdf-file.png" alt="icono pdf">
+                                    <img src="../assets/pdf-file.png" alt="icono pdf">
                                     <p><strong>Descargar PDF</strong></p>
-                                    <img src="/PA_Avance-AulaVirtual/assets/fileread.png" alt="icono leer archivo">
+                                    <img src="../assets/fileread.png" alt="icono leer archivo">
                                     <p><strong>Leer Entrada</strong></p>
                                 </div>
                             </div>
                         </div>
                         <div class="entry-item">
-                            <img src="/PA_Avance-AulaVirtual/assets/Donquijote.png" alt="Entrada 5">
+                            <img src="../assets/Donquijote.png" alt="Entrada 5">
                             <div class="entry-info">
                                 <p><strong>Don Quijote de la Mancha</strong></p>
                                 <p>Miguel de Cervantes</p>
                                 <div class="entry-actions">
-                                    <img src="/PA_Avance-AulaVirtual/assets/pdf-file.png" alt="icono pdf">
+                                    <img src="../assets/pdf-file.png" alt="icono pdf">
                                     <p><strong>Descargar PDF</strong></p>
-                                    <img src="/PA_Avance-AulaVirtual/assets/fileread.png" alt="icono leer archivo">
+                                    <img src="../assets/fileread.png" alt="icono leer archivo">
                                     <p><strong>Leer Entrada</strong></p>
                                 </div>
                             </div>
                         </div>
                         <div class="entry-item">
-                            <img src="/PA_Avance-AulaVirtual/assets/dracula.png" alt="Entrada 6">
+                            <img src="../assets/dracula.png" alt="Entrada 6">
                             <div class="entry-info">
                                 <p><strong>Dracula</strong></p>
                                 <p>Bram Stoker</p>
                                 <div class="entry-actions">
-                                    <img src="/PA_Avance-AulaVirtual/assets/pdf-file.png" alt="icono pdf">
+                                    <img src="../assets/pdf-file.png" alt="icono pdf">
                                     <p><strong>Descargar PDF</strong></p>
-                                    <img src="/PA_Avance-AulaVirtual/assets/fileread.png" alt="icono leer archivo">
+                                    <img src="../assets/fileread.png" alt="icono leer archivo">
                                     <p><strong>Leer Entrada</strong></p>
                                 </div>
                             </div>
@@ -128,6 +128,11 @@
     </footer>
      </body>
 </template>
+
+<script setup>
+import HeaderAlumno from '../components/HeaderAlumno.vue';
+
+</script>
 
 <style scoped>
 .library-card {

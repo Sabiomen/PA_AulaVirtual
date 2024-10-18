@@ -1,32 +1,33 @@
 <template>
     <body class="login-body">
-  <header>
-        <a href="Login.vue" class="logo">
-            <img src="../assets/logo_forlife.png" alt="Logo Escuela For Life">
-        </a>
-        <a href="Login.vue" class="login-section">
-            <span><strong>Login</strong></span>
-            <i class="login-icon"><img src="../assets/icono.jpg" alt="Icono login"></i>
-        </a>
-    </header>
+        <header>
+    <router-link to="/" class="logo">
+        <img src="../assets/logo_forlife.png" alt="Logo Escuela For Life">
+    </router-link>
+    
+    <router-link to="/" class="login-section">
+        <span><strong>Login</strong></span>
+        <i class="login-icon"><img src="../assets/icono.jpg" alt="Icono login"></i>
+    </router-link>
+</header>
 
     <main class="login-main">  
         <h1>Login</h1>
-        <form onsubmit="validarLogin(event)">
-            <div class="form-group">
-                <h2>RUT</h2>
-                <div class="input-container">
-                    <input type="text" id="rut" name="rut" placeholder="Ingresa tu RUT">
-                </div>
-            </div>
-            <div class="form-group">
-                <h2>Contraseña</h2>
-                <div class="input-container">
-                    <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña">
-                </div>
-            </div>
-            <button type="submit">Entrar</button>
-        </form>
+        <form @submit="validarLogin">
+      <div class="form-group">
+        <h2>RUT</h2>
+        <div class="input-container">
+          <input type="text" id="rut" v-model="rut" name="rut" placeholder="Ingresa tu RUT" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <h2>Contraseña</h2>
+        <div class="input-container">
+          <input type="password" id="password" v-model="password" name="password" placeholder="Ingresa tu contraseña" required>
+        </div>
+      </div>
+      <button type="submit">Entrar</button>
+    </form>
     </main>
     
 <footer>
@@ -40,23 +41,32 @@
 </template>
 
 <script>
-function validarLogin(event) {
-            event.preventDefault(); 
-            
-            const rut = document.getElementById('rut').value;
-            const password = document.getElementById('password').value;
-            
-            if (rut === '214001091' && password === '214001091') {
-                window.location.href = 'views/PrincipalAlumno.html';
-            } else if (rut === '7879439635' && password === '7879439635')
-            {
-                window.location.href = 'views/PrincipalDocente.html';
-            } else {
-                alert('RUT o contraseña incorrectos');
-            }
-        }
-</script>
+export default {
+  name: 'Login',
+  data() {
+    return {
+      rut: '',         
+      password: ''     
+    };
+  },
+  methods: {
+    validarLogin(event) {
+      event.preventDefault(); 
 
+      const rut = this.rut;
+      const password = this.password;
+      
+      if (rut === '214001091' && password === '214001091') {
+        this.$router.push('/Cursos'); 
+      } else if (rut === '7879439635' && password === '7879439635') {
+        this.$router.push('/CursosDocente'); 
+      } else {
+        alert('RUT o contraseña incorrectos');
+      }
+    }
+  }
+};
+</script>
 <style scoped>
 
 
