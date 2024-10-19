@@ -1,7 +1,6 @@
 <template>
 <body class="principal-alumno-body">
     <HeaderAlumno/>
-    
     <main>
         <div class="profile-card">
             <div class="profile-header">
