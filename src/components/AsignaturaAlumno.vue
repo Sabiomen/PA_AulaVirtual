@@ -5,14 +5,13 @@
           <img src="../assets/return.png" alt="Volver">
         </router-link>
         <div class="class-logo">
-          <img :img="courseImage" alt="Logo de la clase">
+          <img :src="courseImage" alt="Logo de la clase">
         </div>
         <div class="class-info">
           <h2>{{ courseName }}</h2>
           <p>Prof. {{ professorName }}</p>
         </div>
       </div>
-  
       <div class="course-content">
         <div class="left-column">
           <h3>Contenidos del Curso</h3>

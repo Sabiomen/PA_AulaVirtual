@@ -5,7 +5,7 @@
         <AsignaturaAlumno
           courseName="Matematicas y Estadistica"
           professorName=" Richard Hanson"
-          courseImage="../assets/course-2alt.png"
+          courseImage="../src/assets/course-2alt.png"
         />
       </main>
     </body>

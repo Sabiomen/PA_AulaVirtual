@@ -5,7 +5,7 @@
         <AsignaturaAlumno
           courseName="Historia y Geografía"
           professorName=" Erica Worthington"
-          courseImage="../assets/course-1.png"
+          courseImage="../src/assets/course-1.png"
         />
       </main>
     </body>

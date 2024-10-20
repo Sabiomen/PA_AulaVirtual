@@ -5,7 +5,7 @@
         <AsignaturaAlumno
           courseName="Ingles"
           professorName=" Chelsey Addams"
-          courseImage="../assets/course-4.png"
+          courseImage="../src/assets/course-4.png"
         />
       </main>
     </body>
