@@ -25,19 +25,23 @@
           </div>
           <div class="content-section">
             <div class="content-icon">
-              <img src="../assets/pdf-file.png" alt="Icono contenido">
+              <a :href="url" :download="pdfFile">
+                <img src="../assets/pdf-file.png" alt="Icono contenido">
+              </a>
             </div>
             <div class="content-text">
               <p>Apuntes Materia Clase</p>
             </div>
           </div>
           <div class="content-section">
-            <div class="content-icon">
-              <img src="../assets/external-link.png" alt="Icono contenido">
-            </div>
-            <div class="content-text">
-              <p>Documento Materia</p>
-            </div>
+            <a :href="url2" target="_blank" rel="noopener noreferrer">
+              <div class="content-icon">
+                <img src="../assets/external-link.png" alt="Icono contenido">
+              </div>
+              <div class="content-text">
+                <p>Documento Materia</p>
+              </div>
+            </a>
           </div>
           <div class="content-section">
             <router-link :to="workshop" class="content-icon">
@@ -140,7 +144,15 @@
       type: String,
       required: true
     },
+    url:{
+      type: String,
+      required: true
+    },
     pdfFile:{
+      type: String,
+      required: true
+    },
+    url2:{
       type: String,
       required: true
     }
@@ -200,7 +212,13 @@
     text-decoration: none;
     color: black;
   }
-  
+  .content-section a {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: black;
+  }
   .content-icon img {
     width: 40px;
     height: auto;

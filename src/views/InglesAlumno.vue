@@ -7,6 +7,9 @@
           professorName=" Chelsey Addams"
           courseImage="../src/assets/course-4.png"
           workshop="/Cursos/Ingles/Taller"
+          url="src/assets/ApuntesIngles.pdf"
+          pdfFile="ApuntesdeIngles.pdf"
+          url2="/src/assets/ApuntesIngles.pdf"
         />
       </main>
     </body>

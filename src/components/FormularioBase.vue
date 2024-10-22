@@ -146,30 +146,36 @@ const props = defineProps({
     width: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     margin-top: 20px;
 }
 
 .question {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 30px;
 }
 
 .options {
     display: flex;
     flex-direction: column; 
-    gap: 10px;
-    margin-top: 10px;
+    gap: 15px; 
+    margin-top: 10px; 
 }
 
 .option {
-    width: 25px;
-    height: 25px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px;
+    height: auto;
     border: 1px solid #ccc;
     border-radius: 6px;
-    background-color: #000000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    text-align: right;
+    min-width: 100px;
 }
+
 
 .side-section {
     width: 35%;
@@ -225,5 +231,7 @@ const props = defineProps({
 .finish-button:hover {
     background-color: #0d6efd;
 }
+
+
 
 </style>

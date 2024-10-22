@@ -7,6 +7,9 @@
           professorName=" Erica Worthington"
           courseImage="../src/assets/course-1.png"
           workshop="/Cursos/Historia/Taller"
+          url="src/assets/ApuntesHistoria.pdf"
+          pdfFile="ApuntesdeHistoria.pdf"
+          url2="/src/assets/ApuntesHistoria.pdf"
         />
       </main>
     </body>
@@ -18,7 +21,6 @@
   
   </script>
 <style scoped>
-
 .principal-alumno-body {
     background-color: white;
     margin: 0;

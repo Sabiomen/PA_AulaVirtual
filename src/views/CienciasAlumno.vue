@@ -7,6 +7,9 @@
           professorName=" Frederick Fitzgerald Fazbearington"
           courseImage="/src/assets/course-3.png"
           workshop="/Cursos/Ciencias/Taller"
+          url="src/assets/ApuntesCiencias.pdf"
+          pdfFile="ApuntesdeCiencias.pdf"
+          url2="/src/assets/ApuntesCiencias.pdf"
         />
       </main>
     </body>

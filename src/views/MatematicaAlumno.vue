@@ -7,6 +7,9 @@
           professorName=" Richard Hanson"
           courseImage="../src/assets/course-2alt.png"
           workshop="/Cursos/Matematica/Taller"
+          url="src/assets/ApuntesMatematica.pdf"
+          pdfFile="ApuntesdeMatematicas.pdf"
+          url2="/src/assets/ApuntesMatematica.pdf"
         />
       </main>
     </body>

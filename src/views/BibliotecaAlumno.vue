@@ -22,10 +22,14 @@
                                 <p><strong>Farenheit 451</strong></p>
                                 <p>Ray Bradbury</p>
                                 <div class="entry-actions">
-                                    <img src="../assets/pdf-file.png" alt="icono pdf">
-                                    <p><strong>Descargar PDF</strong></p>
-                                    <img src="../assets/fileread.png" alt="icono leer archivo">
-                                    <p><strong>Leer Entrada</strong></p>
+                                    <a href="\src\assets\Ray Bradbury - Fahrenheit 451.pdf" download="Fahrenheit 451.pdf">
+                                        <img src="../assets/pdf-file.png" alt="icono pdf">
+                                        <p><strong>Descargar PDF</strong></p>
+                                    </a>
+                                    <a href="\src\assets\Ray Bradbury - Fahrenheit 451.pdf" target="_blank" rel="noopener noreferrer">
+                                        <img src="../assets/fileread.png" alt="icono leer archivo">
+                                        <p><strong>Leer Entrada</strong></p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -35,10 +39,14 @@
                                 <p><strong>Colmillo Blanco</strong></p>
                                 <p>Jack London</p>
                                 <div class="entry-actions">
-                                    <img src="../assets/pdf-file.png" alt="icono pdf">
-                                    <p><strong>Descargar PDF</strong></p>
-                                    <img src="../assets/fileread.png" alt="icono leer archivo">
-                                    <p><strong>Leer Entrada</strong></p>
+                                    <a href="\src\assets\London, Jack - Colmillo blanco.pdf" download="Colmillo Blanco.pdf">
+                                        <img src="../assets/pdf-file.png" alt="icono pdf">
+                                        <p><strong>Descargar PDF</strong></p>
+                                    </a>
+                                    <a href="\src\assets\London, Jack - Colmillo blanco.pdf" target="_blank" rel="noopener noreferrer">
+                                        <img src="../assets/fileread.png" alt="icono leer archivo">
+                                        <p><strong>Leer Entrada</strong></p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -48,10 +56,14 @@
                                 <p><strong>Un Mundo Feliz</strong></p>
                                 <p>Aldous Huxley</p>
                                 <div class="entry-actions">
-                                    <img src="../assets/pdf-file.png" alt="icono pdf">
-                                    <p><strong>Descargar PDF</strong></p>
-                                    <img src="../assets/fileread.png" alt="icono leer archivo">
-                                    <p><strong>Leer Entrada</strong></p>
+                                    <a href="\src\assets\Aldous HGuxley Un mundo Feliz.pdf" download="Un Mundo Feliz.pdf">
+                                        <img src="../assets/pdf-file.png" alt="icono pdf">
+                                        <p><strong>Descargar PDF</strong></p>
+                                    </a>
+                                    <a href="\src\assets\Aldous HGuxley Un mundo Feliz.pdf" target="_blank" rel="noopener noreferrer">
+                                        <img src="../assets/fileread.png" alt="icono leer archivo">
+                                        <p><strong>Leer Entrada</strong></p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -69,10 +81,14 @@
                                 <p><strong>Frankenstein</strong></p>
                                 <p>Mary Shelley</p>
                                 <div class="entry-actions">
-                                    <img src="../assets/pdf-file.png" alt="icono pdf">
-                                    <p><strong>Descargar PDF</strong></p>
-                                    <img src="../assets/fileread.png" alt="icono leer archivo">
-                                    <p><strong>Leer Entrada</strong></p>
+                                    <a href="\src\assets\Frankenstein.pdf" download="Frankenstein.pdf">
+                                        <img src="../assets/pdf-file.png" alt="icono pdf">
+                                        <p><strong>Descargar PDF</strong></p>
+                                    </a>
+                                    <a href="\src\assets\Frankenstein.pdf" target="_blank" rel="noopener noreferrer">
+                                        <img src="../assets/fileread.png" alt="icono leer archivo">
+                                        <p><strong>Leer Entrada</strong></p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -82,10 +98,14 @@
                                 <p><strong>Don Quijote de la Mancha</strong></p>
                                 <p>Miguel de Cervantes</p>
                                 <div class="entry-actions">
-                                    <img src="../assets/pdf-file.png" alt="icono pdf">
-                                    <p><strong>Descargar PDF</strong></p>
-                                    <img src="../assets/fileread.png" alt="icono leer archivo">
-                                    <p><strong>Leer Entrada</strong></p>
+                                    <a href="src\assets\Miguel de Cervantes El Ingenioso Hidalgo Don Quijote de la Mancha.pdf" download="Don Quijote de la Mancha.pdf">
+                                        <img src="../assets/pdf-file.png" alt="icono pdf">
+                                        <p><strong>Descargar PDF</strong></p>
+                                    </a>
+                                    <a href="src\assets\Miguel de Cervantes El Ingenioso Hidalgo Don Quijote de la Mancha.pdf" target="_blank" rel="noopener noreferrer">
+                                        <img src="../assets/fileread.png" alt="icono leer archivo">
+                                        <p><strong>Leer Entrada</strong></p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -95,10 +115,14 @@
                                 <p><strong>Dracula</strong></p>
                                 <p>Bram Stoker</p>
                                 <div class="entry-actions">
-                                    <img src="../assets/pdf-file.png" alt="icono pdf">
-                                    <p><strong>Descargar PDF</strong></p>
-                                    <img src="../assets/fileread.png" alt="icono leer archivo">
-                                    <p><strong>Leer Entrada</strong></p>
+                                    <a href="\src\assets\Dracula - Bram Stoker.pdf" download="Dracula.pdf">
+                                        <img src="../assets/pdf-file.png" alt="icono pdf">
+                                        <p><strong>Descargar PDF</strong></p>
+                                    </a>
+                                    <a href="\src\assets\Dracula - Bram Stoker.pdf" target="_blank" rel="noopener noreferrer">
+                                        <img src="../assets/fileread.png" alt="icono leer archivo">
+                                        <p><strong>Leer Entrada</strong></p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -240,5 +264,14 @@ import HeaderAlumno from '../components/HeaderAlumno.vue';
     top: 20px;
     right:-200px;
     height: 898px; 
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 </style>
