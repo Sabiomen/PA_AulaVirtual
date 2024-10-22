@@ -9,12 +9,18 @@
                 <RouterLink to="/VistaCursoDocente">Revisiones</RouterLink>
             </div>
             <div class="user__status">
-                <RouterLink to="/PerfilDocente"><img class="profile__icon" src="../assets/1&1guy.png"></RouterLink>
+                <RouterLink to="/PerfilDocente">
+                    <img class="profile__icon" :src="profileImage" alt="profile-image">
+                </RouterLink>
                 <RouterLink to="/Login"><img class="logout" src="../assets/logout.png"></RouterLink>
             </div>
         </div>
     </div>
 </template>
+
+<script setup>
+import { profileImage } from '../profileState.js';
+</script>
 
 <style scoped>
 .header__container {

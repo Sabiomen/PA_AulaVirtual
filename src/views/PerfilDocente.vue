@@ -6,11 +6,12 @@
             <div class="navigation__container">
                 <RouterLink to="/"><img src="../assets/return.png" class="navigation__icon">
                 </RouterLink>
-                <RouterLink to="/EdicionPerfilDocente"><img src="../assets/settings.png" class="navigation__icon"></RouterLink>
+                <RouterLink to="/EdicionPerfilDocente"><img src="../assets/settings.png" class="navigation__icon">
+                </RouterLink>
             </div>
             <div class="profile__info">
                 <div class="profile__image">
-                    <img src="../assets/1&1guy.png" class="profile__picture" alt="profile-picture">
+                    <img :src="profileImage" class="profile__picture" alt="profile-picture">
                 </div>
                 <div class="profile__details">
                     <h2>Frederick Fitzgerald Fazbear</h2>
@@ -37,6 +38,7 @@
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
 import Header from '../components/TeacherHeader.vue';
+import { profileImage } from '../profileState';
 
 const courses = ref([]);
 
@@ -61,6 +63,7 @@ onMounted(() => {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .profile__container {
@@ -69,6 +72,7 @@ onMounted(() => {
     flex-direction: column;
     border-radius: 15px;
     box-shadow: 7px 7px 7px 7px #d6d6d6;
+    width: 75%;
 }
 
 .navigation__container {
