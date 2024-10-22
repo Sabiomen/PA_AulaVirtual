@@ -1,5 +1,12 @@
 <template>
     <Header />
+
+    <div class="general__container">
+        <div class="profile__container">
+            
+        </div>
+    </div>
+
 </template>
 
 <script setup>

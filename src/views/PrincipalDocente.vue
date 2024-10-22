@@ -1,65 +1,41 @@
 <template>
     <Header />
     <div class="general__container">
-      <div class="courselist__container">
-        <CourseCard
-          v-for="(course, index) in courses"
-          :key="index"
-          :image="course.image"
-          :courseName="course.courseName"
-          :teacherName="course.teacherName"
-          :level="course.level"
-        />
-      </div>
+        <div class="courselist__container">
+            <CourseCard v-for="(course, index) in courses" :key="index" :image="course.image"
+                :courseName="course.courseName" :teacherName="course.teacherName" :level="course.level" />
+        </div>
     </div>
-  </template>
+</template>
 
-  <script setup>
-  import CourseCard from '../components/CourseCard.vue';
-  import Header from '../components/TeacherHeader.vue'
-  import course1 from '../assets/course-1.png';
-  import course2 from '../assets/course-2.png';
-  import course3 from '../assets/course-3.png';
-  import course4 from '../assets/course-4.png';
+<script setup>
+import { ref, onMounted } from "vue";
+import axios from "axios";
+import CourseCard from "../components/CourseCard.vue";
+import Header from "../components/TeacherHeader.vue";
 
+const courses = ref([]);
 
-  const courses = [
-    {
-      image: course1,
-      courseName: 'Historia y Geografía',
-      teacherName: 'Prof. Frederick Fazbear',
-      level: '6° Básico'
-    },
-    {
-      image: course2,
-      courseName: 'Geografía e Historia',
-      teacherName: 'Prof. Frederick Fazbear',
-      level: '7° Básico'
-    },
-    {
-      image: course3,
-      courseName: 'Ciencias Sociales',
-      teacherName: 'Prof. Frederick Fazbear',
-      level: '2° Medio'
-    },
-    {
-      image: course4,
-      courseName: 'Geografía y Ciencias Sociales',
-      teacherName: 'Prof. Frederick Fazbear',
-      level: '4° Medio'
+const fetchCourses = async () => {
+    try {
+        const response = await axios.get('http://localhost:3000/courses');
+        courses.value = response.data;
+    } catch (error) {
+        console.error('Error fetching courses:', error);
     }
-  ];
-  </script>
+};
 
-  <style scoped>
+onMounted(() => {
+    fetchCourses();
+});
+</script>
 
-  .courselist__container {
+<style scoped>
+.courselist__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 60px;
     column-gap: 50px;
-  }
-
-
-  </style>
+}
+</style>

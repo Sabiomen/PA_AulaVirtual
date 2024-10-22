@@ -1,0 +1,28 @@
+{
+    "courses": [
+        {
+            "image": "/src/assets/course-1.png",
+            "courseName": "Historia y Geografía",
+            "teacherName": "Prof. Frederick Fazbear",
+            "level": "6° Básico"
+        },
+        {
+            "image": "/src/assets/course-2.png",
+            "courseName": "Geografía e Historia",
+            "teacherName": "Prof. Frederick Fazbear",
+            "level": "7° Básico"
+        },
+        {
+            "image": "/src/assets/course-3.png",
+            "courseName": "Ciencias Sociales",
+            "teacherName": "Prof. Frederick Fazbear",
+            "level": "2° Medio"
+        },
+        {
+            "image": "/src/assets/course-4.png",
+            "courseName": "Geografía y Ciencias Sociales",
+            "teacherName": "Prof. Frederick Fazbear",
+            "level": "4° Medio"
+        }
+    ]
+}
