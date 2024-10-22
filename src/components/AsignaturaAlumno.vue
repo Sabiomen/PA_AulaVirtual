@@ -16,14 +16,55 @@
         <div class="left-column">
           <h3>Contenidos del Curso</h3>
           <div class="content-section">
+            <router-link :to="workshop" class="content-icon">
+              <img src="../assets/survey.png" alt="Icono contenido">
+            </router-link>
+            <div class="content-text">
+              <p>Cuestionario Diagnostico</p>
+            </div>
+          </div>
+          <div class="content-section">
             <div class="content-icon">
               <img src="../assets/pdf-file.png" alt="Icono contenido">
             </div>
             <div class="content-text">
-              <p>Apuntes Materia Clase 1</p>
+              <p>Apuntes Materia Clase</p>
+            </div>
+          </div>
+          <div class="content-section">
+            <div class="content-icon">
+              <img src="../assets/external-link.png" alt="Icono contenido">
+            </div>
+            <div class="content-text">
+              <p>Documento Materia</p>
+            </div>
+          </div>
+          <div class="content-section">
+            <router-link :to="workshop" class="content-icon">
+              <img src="../assets/survey.png" alt="Icono contenido">
+            </router-link>
+            <div class="content-text">
+              <p>Cuestionario Reforzamiento</p>
+            </div>
+          </div>
+          <div class="content-section">
+            <div class="content-icon">
+              <img src="../assets/external-link.png" alt="Icono contenido">
+            </div>
+            <div class="content-text">
+              <p>Video Materia</p>
+            </div>
+          </div>
+          <div class="content-section">
+            <router-link :to="workshop" class="content-icon">
+              <img src="../assets/survey.png" alt="Icono contenido">
+            </router-link>
+            <div class="content-text">
+              <p>Prueba Teorica 1</p>
             </div>
           </div>
         </div>
+        
         <div class="right-column">
           <h3>Planificación Semestral</h3>
           <div class="content-section">
@@ -34,6 +75,46 @@
               <p>Taller 1: 3 de Septiembre</p>
             </div>
           </div>
+          <div class="content-section">
+              <div class="content-icon">
+                <img src="../assets/lightbulb.png" alt="Icono contenido">
+              </div>
+              <div class="content-text">
+                <p>Prueba 1: 10 de Septiembre</p>
+              </div>
+            </div>
+          <div class="content-section">
+              <div class="content-icon">
+                <img src="../assets/lightbulb.png" alt="Icono contenido">
+              </div>
+              <div class="content-text">
+                <p>Taller 2: 25 de Septiembre</p>
+              </div>
+           </div>
+          <div class="content-section">
+              <div class="content-icon">
+                  <img src="../assets/lightbulb.png" alt="Icono contenido">
+              </div>
+              <div class="content-text">
+                <p>Prueba 2: 9 de Octubre</p>
+              </div>
+            </div>  
+            <div class="content-section">
+              <div class="content-icon">
+                <img src="../assets/lightbulb.png" alt="Icono contenido">
+              </div>
+              <div class="content-text">
+                  <p>Taller 3: 23 de Octubre</p>
+              </div>
+            </div>
+            <div class="content-section">
+              <div class="content-icon">
+                <img src="../assets/lightbulb.png" alt="Icono contenido">
+              </div>
+              <div class="content-text">
+                  <p>Prueba 3: 12 de Noviembre</p>
+              </div>
+            </div>
         </div>
       </div>
     </div>
@@ -52,6 +133,14 @@
       required: true
     },
     courseImage: {
+      type: String,
+      required: true
+    },
+    workshop:{
+      type: String,
+      required: true
+    },
+    pdfFile:{
       type: String,
       required: true
     }

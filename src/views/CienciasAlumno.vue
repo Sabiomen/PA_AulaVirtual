@@ -5,7 +5,8 @@
         <AsignaturaAlumno
           courseName="Ciencias Sociales"
           professorName=" Frederick Fitzgerald Fazbearington"
-          courseImage="../src/assets/course-3.png"
+          courseImage="/src/assets/course-3.png"
+          workshop="/Cursos/Ciencias/Taller"
         />
       </main>
     </body>

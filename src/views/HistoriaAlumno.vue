@@ -6,6 +6,7 @@
           courseName="Historia y Geografía"
           professorName=" Erica Worthington"
           courseImage="../src/assets/course-1.png"
+          workshop="/Cursos/Historia/Taller"
         />
       </main>
     </body>

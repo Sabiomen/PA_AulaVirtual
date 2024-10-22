@@ -6,6 +6,7 @@
           courseName="Ingles"
           professorName=" Chelsey Addams"
           courseImage="../src/assets/course-4.png"
+          workshop="/Cursos/Ingles/Taller"
         />
       </main>
     </body>

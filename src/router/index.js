@@ -55,22 +55,22 @@ const router = createRouter({
       component: () => import('../views/PendientesAlumno.vue')
     },
     {
-      path: '/Curso/Ciencias/Taller',
+      path: '/Cursos/Ciencias/Taller',
       name: 'TallerCiencias',
       component: () => import('../views/FormularioCiencias.vue')
     },
     {
-      path: '/Curso/Historia/Taller',
+      path: '/Cursos/Historia/Taller',
       name: 'TallerHistoria',
       component: () => import('../views/FormularioHistoria.vue')
     },
     {
-      path: '/Curso/Matematica/Taller',
+      path: '/Cursos/Matematica/Taller',
       name: 'TallerMatematica',
       component: () => import('../views/FormularioMatematica.vue')
     },
     {
-      path: '/Curso/Ingles/Taller',
+      path: '/Cursos/Ingles/Taller',
       name: 'TallerIngles',
       component: () => import('../views/FormularioIngles.vue')
     }

@@ -7,29 +7,29 @@
     <main>
         <div class="form-card">
             <div class="top-left-icon">
-                <a href="CursoAlumno.html">
-                    <img src="/PA_Avance-AulaVirtual/assets/return.png" alt="Regresar">
-                </a>
+                <router-link :to="returnCurso">
+                    <img src="../assets/return.png" alt="Regresar">
+                </router-link>
             </div>
 
             <div class="questions-section">
                 <div class="question">
-                    <p>1.- Si la nariz de Pinocho solo crece al mentir, y Pinocho dice "Mi nariz crecerá" y su nariz crece ¿Ha dicho una mentira o una verdad?</p>
+                    <p>{{ pregunta1 }}</p>
                     <div class="options">
-                        <div class="option"></div>
-                        <div class="option"></div>
-                        <div class="option"></div>
-                        <div class="option"></div>
+                        <div class="option">{{respuesta1}}</div>
+                        <div class="option">{{respuesta2}}</div>
+                        <div class="option">{{respuesta3}}</div>
+                        <div class="option">{{respuesta4}}</div>
                     </div>
                 </div>
 
                 <div class="question">
-                    <p>2.- Si el universo es infinito ¿Por qué el cielo nocturno no está iluminado?</p>
+                    <p>{{ pregunta2 }}</p>
                     <div class="options">
-                        <div class="option"></div>
-                        <div class="option"></div>
-                        <div class="option"></div>
-                        <div class="option"></div>
+                        <div class="option">{{respuesta5}}</div>
+                        <div class="option">{{respuesta6}}</div>
+                        <div class="option">{{respuesta7}}</div>
+                        <div class="option">{{respuesta8}}</div>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                     <div class="grid-item">11</div>
                     <div class="grid-item">12</div>
                 </div>
-                <button class="finish-button"><a href="CursoAlumno.html">Terminar</a></button>
+                <router-link :to="returnCurso"></router-link> <button class="finish-button">Terminar</button>
             </div>
         </div>
     </main>
@@ -66,7 +66,164 @@
 
 <script setup>
 import HeaderAlumno from '../components/HeaderAlumno.vue';
-import HeaderAlumno from '../components/HeaderAlumno.vue';
 
+const props = defineProps({
+    pregunta1: {
+        type: String,
+        required: true
+    },
+    pregunta2: {
+        type: String,
+        required: true
+    },
+    respuesta1: {
+        type: String,
+        required: true
+    },
+    respuesta2: {
+        type: String,
+        required: true
+    },
+    respuesta3: {
+        type: String,
+        required: true
+    },
+    respuesta4: {
+        type: String,
+        required: true
+    },
+    respuesta5: {
+        type: String,
+        required: true
+    },
+    respuesta6: {
+        type: String,
+        required: true
+    },
+    respuesta7: {
+        type: String,
+        required: true
+    },
+    respuesta8: {
+        type: String,
+        required: true
+    },
+    returnCurso: {
+        type: String,
+        required: true
+    }
+})
 
 </script>
+
+<style scoped>
+.form-card {
+    width: 70%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.top-left-icon {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    
+}
+
+.top-left-icon img {
+    width: 30x;
+    height: 30px;
+}
+
+.questions-section {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.question {
+    margin-bottom: 30px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.option {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #000000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.side-section {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title {
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.question-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.grid-item {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.finish-button {
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: #0E86D4;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 200px;
+}
+
+.finish-button a {
+    text-decoration: none;
+    color: white;}
+
+.finish-button:hover {
+    background-color: #0d6efd;
+}
+
+</style>

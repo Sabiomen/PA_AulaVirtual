@@ -6,6 +6,7 @@
           courseName="Matematicas y Estadistica"
           professorName=" Richard Hanson"
           courseImage="../src/assets/course-2alt.png"
+          workshop="/Cursos/Matematica/Taller"
         />
       </main>
     </body>

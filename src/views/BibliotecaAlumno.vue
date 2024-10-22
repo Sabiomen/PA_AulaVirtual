@@ -1,9 +1,7 @@
 <template>
-     <body class="principal-alumno-body">
-
-        <HeaderAlumno/>
-
-        <main>
+    <body class="principal-alumno-body">
+    <HeaderAlumno/>
+    <main>
         <div class="library-card">
             <div class="top-left-icon">
                 <router-link to="/Cursos">

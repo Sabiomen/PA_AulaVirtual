@@ -27,10 +27,10 @@
             <div class="enrolled-subjects">
                 <h2>Asignaturas Cursadas</h2>
                 <ul>
-                    <li>Historia y Geografía</li>
-                    <li>Matematica y Estadistica</li>
-                    <li>Ciencias Sociales</li>
-                    <li>Ingles</li>
+                    <router-link to="/Cursos/Historia"><li>Historia y Geografía</li></router-link>
+                    <router-link to="/Cursos/Matematica"><li>Matematica y Estadistica</li></router-link>
+                    <router-link to="/Cursos/Ciencias"><li>Ciencias Sociales</li></router-link>
+                    <router-link to="/Cursos/Ingles"><li>Ingles</li></router-link>
                 </ul>
             </div>
         </div>
@@ -138,5 +138,12 @@ import HeaderAlumno from '../components/HeaderAlumno.vue';
     margin-right: 10px;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
+a:hover {
+    text-decoration: underline;
+}
 </style>
