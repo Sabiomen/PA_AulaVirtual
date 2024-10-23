@@ -14,19 +14,21 @@ const currentUser = reactive({
 const loggedIn = ref(false);
 
 function login(rut, password) {
-  const user = db.alumns.find(alumn => alumn.rut === rut && alumn.password === password);
+  const user = db.users.find(user => user.rut === rut && user.password === password) ||
+               db.alumns.find(alumn => alumn.rut === rut && alumn.password === password);
+  
   if (user) {
     currentUser.id = user.id;
     currentUser.name = user.name;
     currentUser.role = user.role;
-    currentUser.grade = user.grade;
+    currentUser.grade = user.grade || '';
     currentUser.rut = user.rut;
     currentUser.password = user.password;
     currentUser.profileImage = user.profileImage;
     loggedIn.value = true;
-    return true;
+    return user; 
   }
-  return false;
+  return null;
 }
 
 function logout() {

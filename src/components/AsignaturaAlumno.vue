@@ -1,23 +1,23 @@
 <template>
 <HeaderAlumno />
-<div v-if="courseData" class="course-card">
+<div v-if="subjectData" class="course-card">
     <div class="course-header">
       <router-link to="/Cursos" class="back-button">
         <img src="../assets/return.png" alt="Volver" />
       </router-link>
       <div class="class-logo">
-        <img :src="courseData.courseImage" alt="Logo de la clase" />
+        <img :src="subjectData.subjectImage" alt="Logo de la clase" />
       </div>
       <div class="class-info">
-        <h2>{{ courseData.courseName }}</h2>
-        <p>Prof. {{ courseData.professorName }}</p>
+        <h2>{{ subjectData.subjectName }}</h2>
+        <p>Prof. {{ subjectData.professorName }}</p>
       </div>
     </div>
       <div class="course-content">
         <div class="left-column">
           <h3>Contenidos del Curso</h3>
           <div class="content-section">
-            <router-link :to="{ name: 'TallerCurso', params: { courseName } }" class="content-icon">
+            <router-link :to="{ name: 'TallerCurso', params: { subjectName } }" class="content-icon">
               <img src="../assets/survey.png" alt="Icono contenido">
             <div class="content-text">
               <p>Cuestionario Diagnostico</p>
@@ -25,7 +25,7 @@
           </router-link>
           </div>
           <div class="content-section">
-            <a :href="courseData.url" :download="courseData.pdfFile">
+            <a :href="subjectData.url" :download="subjectData.pdfFile">
               <div class="content-icon">
                 <img src="../assets/pdf-file.png" alt="Icono contenido">
               </div>
@@ -35,7 +35,7 @@
             </a>
           </div>
           <div class="content-section">
-            <a :href="courseData.url" target="_blank" rel="noopener noreferrer">
+            <a :href="subjectData.url" target="_blank" rel="noopener noreferrer">
               <div class="content-icon">
                 <img src="../assets/external-link.png" alt="Icono contenido">
               </div>
@@ -45,7 +45,7 @@
             </a>
           </div>
           <div class="content-section">
-            <router-link :to="{ name: 'TallerCurso', params: { courseName } }" class="content-icon">
+            <router-link :to="{ name: 'TallerCurso', params: { subjectName } }" class="content-icon">
                 <img src="../assets/survey.png" alt="Icono contenido">
               <div class="content-text">
                 <p>Cuestionario Reforzamiento</p>
@@ -54,7 +54,7 @@
           </div>
           <div class="content-section">
             <div class="content-icon">
-              <a :href="courseData.externalUrl" target="_blank" rel="noopener noreferrer">
+              <a :href="subjectData.externalUrl" target="_blank" rel="noopener noreferrer">
                 <div class="content-icon">
                   <img src="../assets/external-link.png" alt="Icono contenido">
                 </div>
@@ -65,7 +65,7 @@
             </div>
           </div>
           <div class="content-section">
-            <router-link :to="courseData.workshop" class="content-icon">
+            <router-link :to="subjectData.workshop" class="content-icon">
               <img src="../assets/survey.png" alt="Icono contenido">
             <div class="content-text">
               <p>Prueba Teorica 1</p>
@@ -146,9 +146,9 @@
   
   const route = useRoute();
   
-  const courseData = computed(() => {
-    return db.courses.find(
-      course => course.courseName === route.params.courseName
+  const subjectData = computed(() => {
+    return db.subjects.find(
+      subject => subject.subjectName === route.params.subjectName
     );
   });
   </script>

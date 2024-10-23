@@ -3,15 +3,15 @@
     <HeaderAlumno />
     <main class="principal-alumno-main">
       <router-link
-        v-for="(course, index) in courses"
+        v-for="(subject, index) in subjects"
         :key="index"
-        :to="{ name: 'CourseDetail', params: { courseName: course.courseName } }"
+        :to="{ name: 'SubjectDetail', params: { subjectName: subject.subjectName } }"
         class="class-card"
       >
-        <img :src="course.courseImage" :alt="'Logo ' + course.courseName" />
+        <img :src="subject.subjectImage" :alt="'Logo ' + subject.subjectName" />
         <div class="class-info">
-          <h2>{{ course.courseName }}</h2>
-          <p>Prof. {{ course.professorName }}</p>
+          <h2>{{ subject.subjectName }}</h2>
+          <p>Prof. {{ subject.professorName }}</p>
           <p>2° Medio</p>
         </div>
       </router-link>
@@ -27,7 +27,7 @@
 <script setup>
 import HeaderAlumno from '../components/HeaderAlumno.vue';
 import db from '../db.json';
-const courses = db.courses;
+const subjects = db.subjects;
 
 </script>
 

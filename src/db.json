@@ -42,49 +42,51 @@
             "level": "2° Medio"
         },
         {
-            "courseid": "4",
+            "subjectid": "4",
             "image": "/src/assets/course-4.png",
-            "courseName": "Geografía y Ciencias Sociales",
+            "subjectName": "Geografía y Ciencias Sociales",
             "teacherName": "Prof. Frederick Fazbear",
             "level": "4° Medio"
-        },
-        {
-            "courseName" :"Ingles",
-            "professorName" :" Chelsey Addams",
-            "courseImage" :"../src/assets/course-4.png",
-            "workshop" :"/Cursos/Ingles/Taller",
-            "url" :"src/assets/ApuntesIngles.pdf",
-            "pdfFile" :"ApuntesdeIngles.pdf",
-            "externalUrl" :"https://www.youtube.com/watch?v=Z6GGAQOMX8c"
-        },
-        {
-            "courseName" :"Historia y Geografia",
-            "professorName" :" Erica Worthington",
-            "courseImage" :"../src/assets/course-1.png",
-            "workshop" :"/Cursos/Historia/Taller",
-            "url" :"src/assets/ApuntesHistoria.pdf",
-            "pdfFile" :"ApuntesdeHistoria.pdf",
-            "externalUrl" :"https://www.youtube.com/watch?v=99I8tt5ZwKE"
-        },
-        {
-            "courseName" :"Ciencias Sociales",
-            "professorName" :" Frederick Fitzgerald Fazbearington",
-            "courseImage" :"/src/assets/course-3.png",
-            "workshop" :"/Cursos/Ciencias/Taller",
-            "url" :"/src/assets/ApuntesCiencias.pdf",
-            "pdfFile" :"ApuntesdeCiencias.pdf",
-            "externalUrl" :"https://www.youtube.com/watch?v=Wkm8U_RtZFg"
-        },
-        {
-            "courseName" :"Matematicas y Estadistica",
-            "professorName" :" Richard Hanson",
-            "courseImage" :"../src/assets/course-2alt.png",
-            "workshop" :"/Cursos/Matematica/Taller",
-            "url" :"src/assets/ApuntesMatematica.pdf",
-            "pdfFile" :"ApuntesdeMatematicas.pdf",
-            "externalUrl" :"https://www.youtube.com/watch?v=-RDBMu7BreE"
         }
     ],
+    "subjects": [
+    {
+        "subjectName" :"Ingles",
+        "professorName" :" Chelsey Addams",
+        "subjectImage" :"../src/assets/course-4.png",
+        "workshop" :"/Cursos/Ingles/Taller",
+        "url" :"src/assets/ApuntesIngles.pdf",
+        "pdfFile" :"ApuntesdeIngles.pdf",
+        "externalUrl" :"https://www.youtube.com/watch?v=Z6GGAQOMX8c"
+    },
+    {
+        "subjectName" :"Historia y Geografia",
+        "professorName" :" Erica Worthington",
+        "subjectImage" :"../src/assets/course-1.png",
+        "workshop" :"/Cursos/Historia/Taller",
+        "url" :"src/assets/ApuntesHistoria.pdf",
+        "pdfFile" :"ApuntesdeHistoria.pdf",
+        "externalUrl" :"https://www.youtube.com/watch?v=99I8tt5ZwKE"
+    },
+    {
+        "subjectName" :"Ciencias Sociales",
+        "professorName" :" Frederick Fitzgerald Fazbearington",
+        "subjectImage" :"/src/assets/course-3.png",
+        "workshop" :"/Cursos/Ciencias/Taller",
+        "url" :"/src/assets/ApuntesCiencias.pdf",
+        "pdfFile" :"ApuntesdeCiencias.pdf",
+        "externalUrl" :"https://www.youtube.com/watch?v=Wkm8U_RtZFg"
+    },
+    {
+        "subjectName" :"Matematicas y Estadistica",
+        "professorName" :" Richard Hanson",
+        "subjectImage" :"../src/assets/course-2alt.png",
+        "workshop" :"/Cursos/Matematica/Taller",
+        "url" :"src/assets/ApuntesMatematica.pdf",
+        "pdfFile" :"ApuntesdeMatematicas.pdf",
+        "externalUrl" :"https://www.youtube.com/watch?v=-RDBMu7BreE"
+    }
+],
     "alumns": [
       {
         "id": 1,

@@ -12,7 +12,7 @@
                 <RouterLink to="/PerfilDocente">
                     <img class="profile__icon" :src="profileImage" alt="profile-image">
                 </RouterLink>
-                <RouterLink to="/Login"><img class="logout" src="../assets/logout.png"></RouterLink>
+                <RouterLink to="/"><img class="logout" src="../assets/logout.png"></RouterLink>
             </div>
         </div>
     </div>

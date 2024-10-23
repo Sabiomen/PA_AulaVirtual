@@ -25,9 +25,9 @@
           <div class="enrolled-subjects">
             <h2>Asignaturas Cursadas</h2>
             <ul>
-              <li v-for="(course, index) in courses" :key="index">
-                <router-link :to="{ name: 'CourseDetail', params: { courseName: course.courseName } }">
-                  {{ course.courseName }}
+              <li v-for="(subject, index) in subjects" :key="index">
+                <router-link :to="{ name: 'SubjectDetail', params: { subjectName: subject.subjectName } }">
+                  {{ subject.subjectName }}
                 </router-link>
               </li>
             </ul>
@@ -48,7 +48,7 @@
   import db from '../db.json';
   
   const { currentUser } = useAuth();
-  const courses = db.courses;
+  const subjects = db.subjects;
   </script>
 
 <style scoped>

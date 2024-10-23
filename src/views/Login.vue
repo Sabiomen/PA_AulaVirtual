@@ -10,20 +10,19 @@
         <i class="login-icon"><img src="../assets/icono.jpg" alt="Icono login"></i>
       </router-link>
     </header>
-
     <main class="login-main">  
       <h1>Login</h1>
       <form @submit.prevent="handleLogin">
         <div class="form-group">
           <h2>RUT</h2>
           <div class="input-container">
-            <input type="text" id="rut" v-model="rut" name="rut" placeholder="Ingresa tu RUT" required>
+            <input type="text" id="rut" v-model="rut" name="rut" placeholder="Ingresa tu RUT" required />
           </div>
         </div>
         <div class="form-group">
           <h2>Contraseña</h2>
           <div class="input-container">
-            <input type="password" id="password" v-model="password" name="password" placeholder="Ingresa tu contraseña" required>
+            <input type="password" id="password" v-model="password" name="password" placeholder="Ingresa tu contraseña" required />
           </div>
         </div>
         <button type="submit">Entrar</button>
@@ -49,11 +48,23 @@ const router = useRouter();
 const rut = ref('');
 const password = ref('');
 
-function handleLogin() {
-  if (login(rut.value, password.value)) {
-    router.push('/Cursos');
-  } else {
-    alert('RUT o contraseña incorrectos');
+async function handleLogin() {
+  try {
+    const user = await login(rut.value, password.value);
+    if (user) {
+      if (user.role === 'Docente') {
+        router.push('/PrincipalDocente');
+      } else if (user.role === 'Alumno') {
+        router.push('/PrincipalAlumno');
+      } else {
+        alert('Rol de usuario no reconocido');
+      }
+    } else {
+      alert('RUT o contraseña incorrectos');
+    }
+  } catch (error) {
+    console.error('Error en el proceso de inicio de sesión:', error);
+    alert('Hubo un problema al intentar iniciar sesión');
   }
 }
 </script>

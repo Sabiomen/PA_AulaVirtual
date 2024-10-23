@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Home from '../views/PrincipalDocente.vue'
+import PrincipalDocente from '../views/PrincipalDocente.vue'
 import AñadirArchivoDocente from '../views/AñadirArchivoDocente.vue'
 import AñadirVideoDocente from '../views/AñadirVideoDocente.vue'
 import CreacionCursoDocente from '../views/CreacionCursoDocente.vue'
@@ -28,10 +28,10 @@ const router = createRouter({
         component: () => import('../views/PrincipalAlumno.vue'),
       },
       {
-        path: '/Cursos/:courseName',
-        name: 'CourseDetail',
+        path: '/Cursos/:subjectName',
+        name: 'SubjectDetail',
         component: () => import('../components/AsignaturaAlumno.vue'),
-        props: route => ({ courseName: route.params.courseName }),
+        props: route => ({ subjectName: route.params.subjectName }),
       },
       {
         path: '/Perfil',
@@ -54,9 +54,13 @@ const router = createRouter({
           component: () => import('../views/PendientesAlumno.vue'),
         },
         {
-          path: '/Cursos/:courseName/Taller',
+          path: '/Cursos/:subjectName/Taller',
           name: 'TallerCurso',
           component: () => import('../components/FormularioBase.vue'),
+        },
+        {
+          path: '/PrincipalDocente',
+          component: PrincipalDocente
         },
         {
             path:'/AñadirArchivoDocente',
