@@ -1,5 +1,5 @@
 import { ref, reactive, computed } from 'vue';
-import database from './database.json';
+import db from './db.json';
 
 const currentUser = reactive({
   id: null,
@@ -14,7 +14,7 @@ const currentUser = reactive({
 const loggedIn = ref(false);
 
 function login(rut, password) {
-  const user = database.alumns.find(alumn => alumn.rut === rut && alumn.password === password);
+  const user = db.alumns.find(alumn => alumn.rut === rut && alumn.password === password);
   if (user) {
     currentUser.id = user.id;
     currentUser.name = user.name;

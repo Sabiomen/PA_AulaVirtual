@@ -54,11 +54,11 @@
 import HeaderAlumno from '../components/HeaderAlumno.vue';
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
-import database from '../database.json';
+import db from '../db.json';
 
 const route = useRoute();
 const workshopData = computed(() => {
-  return database.workshops.find(
+  return db.workshops.find(
     workshop => workshop.workshopCourse === route.params.courseName
   );
 });

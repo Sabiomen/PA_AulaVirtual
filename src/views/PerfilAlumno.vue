@@ -45,10 +45,10 @@
   <script setup>
   import HeaderAlumno from '../components/HeaderAlumno.vue';
   import { useAuth } from '../useAuth.js';
-  import database from '../database.json';
+  import db from '../db.json';
   
   const { currentUser } = useAuth();
-  const courses = database.courses;
+  const courses = db.courses;
   </script>
 
 <style scoped>

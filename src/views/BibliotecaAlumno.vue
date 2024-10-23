@@ -59,14 +59,14 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue';
 import HeaderAlumno from '../components/HeaderAlumno.vue';
-import database from '../database.json'; 
+import db from '../db.json'; 
 
 const books = ref([]);
 const types = ref(["Estudiantil", "Lectura Casual", "Estudio"]);
 const currentFilter = ref('');
 
 onMounted(() => {
-  books.value = database.books;
+  books.value = db.books;
 });
 
 const filterByType = (type) => {

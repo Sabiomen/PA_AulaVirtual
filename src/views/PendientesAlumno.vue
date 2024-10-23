@@ -18,9 +18,9 @@
 
 <script setup>
 import HeaderAlumno from '../components/HeaderAlumno.vue';
-import database from '../database.json';
+import db from '../db.json';
 
-const courses = database.courses;
+const courses = db.courses;
 
 const tasks = [
   "Cuestionario Diagnostico",

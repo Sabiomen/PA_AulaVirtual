@@ -26,8 +26,8 @@
 
 <script setup>
 import HeaderAlumno from '../components/HeaderAlumno.vue';
-import database from '../database.json';
-const courses = database.courses;
+import db from '../db.json';
+const courses = db.courses;
 
 </script>
 

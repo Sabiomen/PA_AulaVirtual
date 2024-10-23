@@ -140,14 +140,14 @@
   
   <script setup>
   import { computed } from 'vue';
-  import database from '../database.json';
+  import db from '../db.json';
   import { useRoute } from 'vue-router';
   import HeaderAlumno from '../components/HeaderAlumno.vue'
   
   const route = useRoute();
   
   const courseData = computed(() => {
-    return database.courses.find(
+    return db.courses.find(
       course => course.courseName === route.params.courseName
     );
   });
