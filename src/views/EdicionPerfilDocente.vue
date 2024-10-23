@@ -169,6 +169,15 @@ const saveChanges = async () => {
     border-radius: 15px;
     width: 150px;
     height: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid #ff0000;
+    color: #f44336;
+}
+
+.delete__button:hover {
+    background-color: #ff0000;
+    color: white;
+    transform: scale(1.05);
 }
 
 .post__button {
@@ -177,5 +186,13 @@ const saveChanges = async () => {
     border-radius: 15px;
     width: 150px;
     height: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid #0E86D4;
 }
+
+.post__button:hover {
+    background-color: #065A9E;
+    transform: scale(1.05);
+}
+
 </style>

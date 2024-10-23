@@ -1,6 +1,8 @@
 <template>
     <Header />
     <div class="general__container">
+        <RouterLink to="/CreacionCursoDocente"><img src="../assets/add-element.png" class="add__element">
+        </RouterLink>
         <div class="courselist__container">
             <CourseCard v-for="(course, index) in courses" :key="index" :image="course.image"
                 :courseName="course.courseName" :teacherName="course.teacherName" :level="course.level" />
@@ -31,6 +33,15 @@ onMounted(() => {
 </script>
 
 <style scoped>
+
+.add__element {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    left: 50px;
+    cursor: pointer;
+}
+
 .courselist__container {
     display: flex;
     flex-wrap: wrap;
