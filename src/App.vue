@@ -1,11 +1,14 @@
-<script setup>
-
-</script>
 
 <template>
-  <RouterView />
+    <RouterView />
 </template>
 
-<style scoped>
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
+</script>
 
+<style>
+    body {
+        font-family: "Poppins", sans-serif;
+   }
 </style>
