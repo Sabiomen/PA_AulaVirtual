@@ -1,0 +1,121 @@
+{
+    "alumns": [
+      {
+        "id": 1,
+        "name": "Alejandro David Prieto Moreno",
+        "role": "Alumno",
+        "grade": "2° Medio",
+        "password": "214001091",
+        "profileImage": "../assets/hagger.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Ximena Alejandra Mora Lisa",
+        "role": "Alumno",
+        "grade": "2° Medio",
+        "password": "202471348",
+        "profileImage": "../assets/416.jpg"
+      }
+    ],
+    "courses": [
+        {
+            "courseName" :"Ingles",
+            "professorName" :" Chelsey Addams",
+            "courseImage" :"../src/assets/course-4.png",
+            "workshop" :"/Cursos/Ingles/Taller",
+            "url" :"src/assets/ApuntesIngles.pdf",
+            "pdfFile" :"ApuntesdeIngles.pdf",
+            "url2" :"/src/assets/ApuntesIngles.pdf",
+            "externalUrl" :"https://www.youtube.com/watch?v=Z6GGAQOMX8c"
+        },
+        {
+            "courseName" :"Historia y Geografía",
+            "professorName" :" Erica Worthington",
+            "courseImage" :"../src/assets/course-1.png",
+            "workshop" :"/Cursos/Historia/Taller",
+            "url" :"src/assets/ApuntesHistoria.pdf",
+            "pdfFile" :"ApuntesdeHistoria.pdf",
+            "url2" :"/src/assets/ApuntesHistoria.pdf",
+            "externalUrl" :"https://www.youtube.com/watch?v=99I8tt5ZwKE"
+        },
+        {
+            "courseName" :"Ciencias Sociales",
+            "professorName" :" Frederick Fitzgerald Fazbearington",
+            "courseImage" :"/src/assets/course-3.png",
+            "workshop" :"/Cursos/Ciencias/Taller",
+            "url" :"src/assets/ApuntesCiencias.pdf",
+            "pdfFile" :"ApuntesdeCiencias.pdf",
+            "url2" :"/src/assets/ApuntesCiencias.pdf",
+            "externalUrl" :"https://www.youtube.com/watch?v=Wkm8U_RtZFg"
+        },
+        {
+            "courseName" :"Matematicas y Estadistica",
+            "professorName" :" Richard Hanson",
+            "courseImage" :"../src/assets/course-2alt.png",
+            "workshop" :"/Cursos/Matematica/Taller",
+            "url" :"src/assets/ApuntesMatematica.pdf",
+            "pdfFile" :"ApuntesdeMatematicas.pdf",
+            "url2" :"/src/assets/ApuntesMatematica.pdf",
+            "externalUrl" :"https://www.youtube.com/watch?v=-RDBMu7BreE"
+        }
+    ],
+    "workshops": [
+        {   
+            "workshopCourse" :"Ciencia",
+            "pregunta1" :"1.- ¿En qué año se firmó la Declaración Universal de los Derechos Humanos?",
+            "pregunta2" :"2.- ¿Qué acontecimiento marcó el inicio de la Revolución Francesa?",
+            "respuesta1" :"A) 1945",
+            "respuesta2" :"B) 1948",
+            "respuesta3" :"C) 1950",
+            "respuesta4" :"D) 1963",
+            "respuesta5" :"A) La toma de la Bastilla",
+            "respuesta6" :"B) El Tratado de Versalles",
+            "respuesta7" :"C) La Revolución Industrial",
+            "respuesta8" :"D) El Congreso de Viena",
+            "returnCurso" :"/Cursos/Ciencias"
+        },
+        {
+            "workshopCourse" :"Historia",
+            "pregunta1" :"1.- ¿Cuál fue la principal causa de la Primera Guerra Mundial?",
+            "pregunta2" :"2.- ¿Cuál es la capital de Francia?",
+            "respuesta1" :"A) La Revolución Rusa",
+            "respuesta2" :"B) La expansión del Imperio Otomano",
+            "respuesta3" :"C) El asesinato del archiduque Francisco Fernando",
+            "respuesta4" :"D) El Tratado de Versalles",
+            "respuesta5" :"A) París",
+            "respuesta6" :"B) Roma",
+            "respuesta7" :"C) Berlín",
+            "respuesta8" :"D) Madrid",
+            "returnCurso" :"/Cursos/Historia"
+        },
+        {
+            "workshopCourse" :"Matemáticas",
+            "pregunta1" :"1.- ¿Cuál es el resultado de 3x+5=14?",
+            "pregunta2" :"2.- ¿Cuál es el valor de xx en la ecuación 5(x−2)=155(x−2)=15?",
+            "respuesta1" :"A) x=3",
+            "respuesta2" :"B) x=2",
+            "respuesta3" :"C) x=4",
+            "respuesta4" :"D) x=5",
+            "respuesta5" :"A) x=5",
+            "respuesta6" :"B) x=3",
+            "respuesta7" :"C) x=6",
+            "respuesta8" :"D) x=9",
+            "returnCurso" :"/Cursos/Matematica"
+        },
+        {
+            "workshopCourse" :"Ingles",
+            "pregunta1" :"1.- Darius had 16 apples and shared half of them with his mom. How many apples did he gave to his mom?",
+            "pregunta2" :"2.- Robert got his paycheck and got paid 1440 dollars for working 48 hours. How much did he got paid per hour? ",
+            "respuesta1" :"A) 6",
+            "respuesta2" :"B) 10",
+            "respuesta3" :"C) 8",
+            "respuesta4" :"D) 4",
+            "respuesta5" :"A) 27",
+            "respuesta6" :"B) 35",
+            "respuesta7" :"C) 29",
+            "respuesta8" :"D) 30",
+            "returnCurso" :"/Cursos/Ingles"
+        }
+    ]
+
+}

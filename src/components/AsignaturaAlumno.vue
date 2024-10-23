@@ -18,20 +18,21 @@
           <div class="content-section">
             <router-link :to="workshop" class="content-icon">
               <img src="../assets/survey.png" alt="Icono contenido">
-            </router-link>
+            
             <div class="content-text">
               <p>Cuestionario Diagnostico</p>
             </div>
+          </router-link>
           </div>
           <div class="content-section">
-            <div class="content-icon">
-              <a :href="url" :download="pdfFile">
+            <a :href="url" :download="pdfFile">
+              <div class="content-icon">
                 <img src="../assets/pdf-file.png" alt="Icono contenido">
-              </a>
-            </div>
-            <div class="content-text">
-              <p>Apuntes Materia Clase</p>
-            </div>
+              </div>
+              <div class="content-text">
+                <p>Apuntes Materia Clase</p>
+              </div>
+            </a>
           </div>
           <div class="content-section">
             <a :href="url2" target="_blank" rel="noopener noreferrer">
@@ -45,27 +46,31 @@
           </div>
           <div class="content-section">
             <router-link :to="workshop" class="content-icon">
-              <img src="../assets/survey.png" alt="Icono contenido">
-            </router-link>
-            <div class="content-text">
-              <p>Cuestionario Reforzamiento</p>
-            </div>
+                <img src="../assets/survey.png" alt="Icono contenido">
+              <div class="content-text">
+                <p>Cuestionario Reforzamiento</p>
+              </div>
+          </router-link>
           </div>
           <div class="content-section">
             <div class="content-icon">
-              <img src="../assets/external-link.png" alt="Icono contenido">
-            </div>
-            <div class="content-text">
-              <p>Video Materia</p>
+              <a :href="externalUrl" target="_blank" rel="noopener noreferrer">
+                <div class="content-icon">
+                  <img src="../assets/external-link.png" alt="Icono contenido">
+                </div>
+                <div class="content-text">
+                  <p>Video Materia</p>
+                </div>
+              </a>
             </div>
           </div>
           <div class="content-section">
             <router-link :to="workshop" class="content-icon">
               <img src="../assets/survey.png" alt="Icono contenido">
-            </router-link>
             <div class="content-text">
               <p>Prueba Teorica 1</p>
             </div>
+          </router-link>
           </div>
         </div>
         
@@ -155,6 +160,10 @@
     url2:{
       type: String,
       required: true
+    },
+    externalUrl:{
+      type: String,
+      required: true
     }
   })
   </script>
@@ -228,4 +237,13 @@
   .content-text p {
     margin: 0;
   }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
   </style>

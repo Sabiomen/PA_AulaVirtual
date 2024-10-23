@@ -10,6 +10,7 @@
           url="src/assets/ApuntesMatematica.pdf"
           pdfFile="ApuntesdeMatematicas.pdf"
           url2="/src/assets/ApuntesMatematica.pdf"
+          externalUrl="https://www.youtube.com/watch?v=-RDBMu7BreE"
         />
       </main>
     </body>

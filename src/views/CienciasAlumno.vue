@@ -10,6 +10,7 @@
           url="src/assets/ApuntesCiencias.pdf"
           pdfFile="ApuntesdeCiencias.pdf"
           url2="/src/assets/ApuntesCiencias.pdf"
+          externalUrl="https://www.youtube.com/watch?v=Wkm8U_RtZFg"
         />
       </main>
     </body>

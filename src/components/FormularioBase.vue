@@ -50,7 +50,9 @@
                     <div class="grid-item">11</div>
                     <div class="grid-item">12</div>
                 </div>
-                <router-link :to="returnCurso"></router-link> <button class="finish-button">Terminar</button>
+                <router-link :to="returnCurso">
+                    <button class="finish-button">Terminar</button>
+                </router-link> 
             </div>
         </div>
     </main>

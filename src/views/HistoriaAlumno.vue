@@ -10,6 +10,7 @@
           url="src/assets/ApuntesHistoria.pdf"
           pdfFile="ApuntesdeHistoria.pdf"
           url2="/src/assets/ApuntesHistoria.pdf"
+          externalUrl="https://www.youtube.com/watch?v=99I8tt5ZwKE"
         />
       </main>
     </body>

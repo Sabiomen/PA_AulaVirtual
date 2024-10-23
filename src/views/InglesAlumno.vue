@@ -10,6 +10,7 @@
           url="src/assets/ApuntesIngles.pdf"
           pdfFile="ApuntesdeIngles.pdf"
           url2="/src/assets/ApuntesIngles.pdf"
+          externalUrl="https://www.youtube.com/watch?v=Z6GGAQOMX8c"
         />
       </main>
     </body>
