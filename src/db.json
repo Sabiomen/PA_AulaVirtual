@@ -1,0 +1,466 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "name": "Frederick Fitzgerald Fazbear",
+            "role": "Docente",
+            "subject": "Historia y Geografía",
+            "password": "7879439635",
+            "profileImage": "/src/assets/1and1whytho2.png",
+            "rut": "12.345.678-9"
+        },
+        {
+            "id": "2",
+            "name": "Jane Doe",
+            "role": "Docente",
+            "subject": "Matemáticas",
+            "password": "password456",
+            "profileImage": "/src/assets/jane-doe.png",
+            "rut": "98.765.432-1"
+        }
+    ],
+    "courses": [
+        {
+            "courseid": "1",
+            "image": "/src/assets/course-1.png",
+            "courseName": "Historia y Geografía",
+            "teacherName": "Prof. Frederick Fazbear",
+            "level": "6° Básico"
+        },
+        {
+            "courseid": "2",
+            "image": "/src/assets/course-2.png",
+            "courseName": "Geografía e Historia",
+            "teacherName": "Prof. Frederick Fazbear",
+            "level": "7° Básico"
+        },
+        {
+            "courseid": "3",
+            "image": "/src/assets/course-3.png",
+            "courseName": "Ciencias Sociales",
+            "teacherName": "Prof. Frederick Fazbear",
+            "level": "2° Medio"
+        },
+        {
+            "subjectid": "4",
+            "image": "/src/assets/course-4.png",
+            "subjectName": "Geografía y Ciencias Sociales",
+            "teacherName": "Prof. Frederick Fazbear",
+            "level": "4° Medio"
+        }
+    ],
+    "subjects": [
+    {
+        "subjectName" :"Ingles",
+        "professorName" :" Chelsey Addams",
+        "subjectImage" :"../src/assets/course-4.png",
+        "workshop" :"/Cursos/Ingles/Taller",
+        "url" :"src/assets/ApuntesIngles.pdf",
+        "pdfFile" :"ApuntesdeIngles.pdf",
+        "externalUrl" :"https://www.youtube.com/watch?v=Z6GGAQOMX8c"
+    },
+    {
+        "subjectName" :"Historia y Geografia",
+        "professorName" :" Erica Worthington",
+        "subjectImage" :"../src/assets/course-1.png",
+        "workshop" :"/Cursos/Historia/Taller",
+        "url" :"src/assets/ApuntesHistoria.pdf",
+        "pdfFile" :"ApuntesdeHistoria.pdf",
+        "externalUrl" :"https://www.youtube.com/watch?v=99I8tt5ZwKE"
+    },
+    {
+        "subjectName" :"Ciencias Sociales",
+        "professorName" :" Frederick Fitzgerald Fazbearington",
+        "subjectImage" :"/src/assets/course-3.png",
+        "workshop" :"/Cursos/Ciencias/Taller",
+        "url" :"/src/assets/ApuntesCiencias.pdf",
+        "pdfFile" :"ApuntesdeCiencias.pdf",
+        "externalUrl" :"https://www.youtube.com/watch?v=Wkm8U_RtZFg"
+    },
+    {
+        "subjectName" :"Matematicas y Estadistica",
+        "professorName" :" Richard Hanson",
+        "subjectImage" :"../src/assets/course-2alt.png",
+        "workshop" :"/Cursos/Matematica/Taller",
+        "url" :"src/assets/ApuntesMatematica.pdf",
+        "pdfFile" :"ApuntesdeMatematicas.pdf",
+        "externalUrl" :"https://www.youtube.com/watch?v=-RDBMu7BreE"
+    }
+],
+    "alumns": [
+      {
+        "id": 1,
+        "name": "Alejandro David Prieto Moreno",
+        "role": "Alumno",
+        "grade": "2° Medio",
+        "rut": "21.400.109-1",
+        "password": "214001091",
+        "profileImage": "/src/assets/hagger.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Ximena Alejandra Mora Lisa",
+        "role": "Alumno",
+        "grade": "2° Medio",
+        "rut": "20.247.134-8",
+        "password": "202471348",
+        "profileImage": "/src/assets/416.jpg"
+      }
+    ],
+    "workshops": [
+        {   
+            "workshopCourse" :"Ciencias Sociales",
+            "pregunta1" :"1.- ¿En qué año se firmó la Declaración Universal de los Derechos Humanos?",
+            "pregunta2" :"2.- ¿Qué acontecimiento marcó el inicio de la Revolución Francesa?",
+            "respuesta1" :"A) 1945",
+            "respuesta2" :"B) 1948",
+            "respuesta3" :"C) 1950",
+            "respuesta4" :"D) 1963",
+            "respuesta5" :"A) La toma de la Bastilla",
+            "respuesta6" :"B) El Tratado de Versalles",
+            "respuesta7" :"C) La Revolución Industrial",
+            "respuesta8" :"D) El Congreso de Viena",
+            "returnCurso" :"/Cursos/Ciencias Sociales"
+        },
+        {
+            "workshopCourse" :"Historia y Geografia",
+            "pregunta1" :"1.- ¿Cuál fue la principal causa de la Primera Guerra Mundial?",
+            "pregunta2" :"2.- ¿Cuál es la capital de Francia?",
+            "respuesta1" :"A) La Revolución Rusa",
+            "respuesta2" :"B) La expansión del Imperio Otomano",
+            "respuesta3" :"C) El asesinato del archiduque Francisco Fernando",
+            "respuesta4" :"D) El Tratado de Versalles",
+            "respuesta5" :"A) París",
+            "respuesta6" :"B) Roma",
+            "respuesta7" :"C) Berlín",
+            "respuesta8" :"D) Madrid",
+            "returnCurso" :"/Cursos/Historia y Geografia"
+        },
+        {
+            "workshopCourse" :"Matematicas y Estadistica",
+            "pregunta1" :"1.- ¿Cuál es el resultado de 3x+5=14?",
+            "pregunta2" :"2.- ¿Cuál es el valor de xx en la ecuación 5(x−2)=155(x−2)=15?",
+            "respuesta1" :"A) x=3",
+            "respuesta2" :"B) x=2",
+            "respuesta3" :"C) x=4",
+            "respuesta4" :"D) x=5",
+            "respuesta5" :"A) x=5",
+            "respuesta6" :"B) x=3",
+            "respuesta7" :"C) x=6",
+            "respuesta8" :"D) x=9",
+            "returnCurso" :"/Cursos/Matematicas y Estadistica"
+        },
+        {
+            "workshopCourse" :"Ingles",
+            "pregunta1" :"1.- Darius had 16 apples and shared half of them with his mom. How many apples did he gave to his mom?",
+            "pregunta2" :"2.- Robert got his paycheck and got paid 1440 dollars for working 48 hours. How much did he got paid per hour? ",
+            "respuesta1" :"A) 6",
+            "respuesta2" :"B) 10",
+            "respuesta3" :"C) 8",
+            "respuesta4" :"D) 4",
+            "respuesta5" :"A) 27",
+            "respuesta6" :"B) 35",
+            "respuesta7" :"C) 29",
+            "respuesta8" :"D) 30",
+            "returnCurso" :"/Cursos/Ingles"
+        }
+    ],
+    "books": [
+        {
+          "id": 1,
+          "title": "Farenheit 451",
+          "author": "Ray Bradbury",
+          "image": "src/assets/farenheit.png",
+          "pdfPath": "/src/assets/Ray Bradbury - Fahrenheit 451.pdf",
+          "downloadName": "Fahrenheit 451.pdf",
+          "type": "Lectura Casual"
+        },
+        {
+          "id": 2,
+          "title": "Colmillo Blanco",
+          "author": "Jack London",
+          "image": "src/assets/colmilloblanco.png",
+          "pdfPath": "/src/assets/London, Jack - Colmillo blanco.pdf",
+          "downloadName": "Colmillo Blanco.pdf",
+          "type": "Estudio"
+        },
+        {
+          "id": 3,
+          "title": "Un Mundo Feliz",
+          "author": "Aldous Huxley",
+          "image": "src/assets/unmundofeliz.png",
+          "pdfPath": "/src/assets/Aldous HGuxley Un mundo Feliz.pdf",
+          "downloadName": "Un Mundo Feliz.pdf",
+          "type": "Lectura Casual"
+        },
+        {
+          "id": 4,
+          "title": "Frankenstein",
+            "author": "Mary Shelley",
+            "image": "src/assets/frankenstein.png",
+            "pdfPath": "/src/assets/Frankenstein.pdf",
+            "downloadName": "Frankenstein.pdf",
+            "type": "Estudio"
+        },
+        {
+          "id": 5,
+          "title": "Don Quijote de la Mancha",
+          "author": "Miguel de Cervantes",
+          "image": "src/assets/Donquijote.png",
+          "pdfPath": "/src/assets/Miguel de Cervantes El Ingenioso Hidalgo Don Quijote de la Mancha.pdf",
+          "downloadName": "Don Quijote de la Mancha.pdf",
+          "type": "Estudio"
+        },
+        {
+          "id": 6,
+          "title": "Dracula",
+          "author": "Bram Stoker",
+          "image": "src/assets/dracula.png",
+          "pdfPath": "/src/assets/Dracula - Bram Stoker.pdf",
+          "downloadName": "Dracula.pdf",
+          "type": "Estudio"
+        }
+      ],
+    "students": [
+        {
+            "id": "1",
+            "Name": "Matías Ignacio González Silva",
+            "Academic Level": "6° Básico",
+            "isEnrolled": false
+        },
+        {
+            "id": "2",
+            "Name": "Javiera Belén Rojas Araya",
+            "Academic Level": "6° Básico",
+            "isEnrolled": false
+        },
+        {
+            "id": "3",
+            "Name": "Sebastián Andrés Muñoz Torres",
+            "Academic Level": "6° Básico",
+            "isEnrolled": false
+        },
+        {
+            "id": "4",
+            "Name": "Catalina Francisca Pizarro Martínez",
+            "Academic Level": "6° Básico",
+            "isEnrolled": false
+        },
+        {
+            "id": "5",
+            "Name": "Benjamín Alejandro Pérez Soto",
+            "Academic Level": "6° Básico",
+            "isEnrolled": false
+        },
+        {
+            "id": "6",
+            "Name": "Isidora Fernanda Morales Reyes",
+            "Academic Level": "6° Básico",
+            "isEnrolled": false
+        },
+        {
+            "id": "7",
+            "Name": "Tomás Felipe Díaz Fuentes",
+            "Academic Level": "6° Básico",
+            "isEnrolled": false
+        },
+        {
+            "id": "8",
+            "Name": "Valentina Sofía Vásquez Figueroa",
+            "Academic Level": "6° Básico",
+            "isEnrolled": false
+        },
+        {
+            "id": "9",
+            "Name": "Francisco Javier Herrera Carrasco",
+            "Academic Level": "6° Básico",
+            "isEnrolled": false
+        },
+        {
+            "id": "10",
+            "Name": "Antonia Carolina Castillo Vergara",
+            "Academic Level": "6° Básico",
+            "isEnrolled": false
+        },
+        {
+            "id": "11",
+            "Name": "Diego Patricio Ramírez Gutiérrez",
+            "Academic Level": "7° Básico",
+            "isEnrolled": false
+        },
+        {
+            "id": "12",
+            "Name": "Fernanda Valeria Medina Espinoza",
+            "Academic Level": "7° Básico",
+            "isEnrolled": false
+        },
+        {
+            "id": "13",
+            "Name": "Nicolás Eduardo Castro Salazar",
+            "Academic Level": "7° Básico",
+            "isEnrolled": false
+        },
+        {
+            "id": "14",
+            "Name": "Constanza Daniela Morales Palma",
+            "Academic Level": "7° Básico",
+            "isEnrolled": false
+        },
+        {
+            "id": "15",
+            "Name": "Joaquín Esteban Ortiz Rivera",
+            "Academic Level": "7° Básico",
+            "isEnrolled": false
+        },
+        {
+            "id": "16",
+            "Name": "Camila Andrea Parra Cáceres",
+            "Academic Level": "7° Básico",
+            "isEnrolled": false
+        },
+        {
+            "id": "17",
+            "Name": "Felipe Alonso Gallardo Rivas",
+            "Academic Level": "7° Básico",
+            "isEnrolled": false
+        },
+        {
+            "id": "18",
+            "Name": "Daniela Beatriz Sáez Barra",
+            "Academic Level": "7° Básico",
+            "isEnrolled": false
+        },
+        {
+            "id": "19",
+            "Name": "Martín Arturo Aguilera Mena",
+            "Academic Level": "7° Básico",
+            "isEnrolled": false
+        },
+        {
+            "id": "20",
+            "Name": "Josefa Rocío Sánchez Godoy",
+            "Academic Level": "7° Básico",
+            "isEnrolled": false
+        },
+        {
+            "id": "21",
+            "Name": "Agustín Cristóbal Vargas Cornejo",
+            "Academic Level": "2° Medio",
+            "isEnrolled": false
+        },
+        {
+            "id": "22",
+            "Name": "María Paz Cifuentes Jiménez",
+            "Academic Level": "2° Medio",
+            "isEnrolled": false
+        },
+        {
+            "id": "23",
+            "Name": "Vicente Mauricio Orellana Pino",
+            "Academic Level": "2° Medio",
+            "isEnrolled": false
+        },
+        {
+            "id": "24",
+            "Name": "Sofía Macarena Álvarez Toledo",
+            "Academic Level": "2° Medio",
+            "isEnrolled": false
+        },
+        {
+            "id": "25",
+            "Name": "Cristóbal Gabriel Fuenzalida Peña",
+            "Academic Level": "2° Medio",
+            "isEnrolled": false
+        },
+        {
+            "id": "26",
+            "Name": "Carolina Andrea Godoy Zapata",
+            "Academic Level": "2° Medio",
+            "isEnrolled": false
+        },
+        {
+            "id": "27",
+            "Name": "José Ignacio Valdés Contreras",
+            "Academic Level": "2° Medio",
+            "isEnrolled": false
+        },
+        {
+            "id": "28",
+            "Name": "Francisca Antonia Paredes Alarcón",
+            "Academic Level": "2° Medio",
+            "isEnrolled": false
+        },
+        {
+            "id": "29",
+            "Name": "Alejandro Rodrigo Leiva Miranda",
+            "Academic Level": "2° Medio",
+            "isEnrolled": false
+        },
+        {
+            "id": "30",
+            "Name": "Paula Andrea Yáñez Varela",
+            "Academic Level": "2° Medio",
+            "isEnrolled": false
+        },
+        {
+            "id": "31",
+            "Name": "Ricardo Antonio Escobar Aravena",
+            "Academic Level": "4° Medio",
+            "isEnrolled": false
+        },
+        {
+            "id": "32",
+            "Name": "Claudia Alejandra Sepúlveda Cárdenas",
+            "Academic Level": "4° Medio",
+            "isEnrolled": false
+        },
+        {
+            "id": "33",
+            "Name": "Jorge Emilio Farias Maldonado",
+            "Academic Level": "4° Medio",
+            "isEnrolled": false
+        },
+        {
+            "id": "34",
+            "Name": "Gabriela Isabel Carrillo Núñez",
+            "Academic Level": "4° Medio",
+            "isEnrolled": false
+        },
+        {
+            "id": "35",
+            "Name": "Rodrigo Andrés Varela Olivares",
+            "Academic Level": "4° Medio",
+            "isEnrolled": false
+        },
+        {
+            "id": "36",
+            "Name": "Lorena Patricia Cáceres Flores",
+            "Academic Level": "4° Medio",
+            "isEnrolled": false
+        },
+        {
+            "id": "37",
+            "Name": "Juan Pablo Fuentes Valenzuela",
+            "Academic Level": "4° Medio",
+            "isEnrolled": false
+        },
+        {
+            "id": "38",
+            "Name": "María Teresa Morales Bustamante",
+            "Academic Level": "4° Medio",
+            "isEnrolled": false
+        },
+        {
+            "id": "39",
+            "Name": "Luis Felipe Riquelme Gálvez",
+            "Academic Level": "4° Medio",
+            "isEnrolled": false
+        },
+        {
+            "id": "40",
+            "Name": "Patricia Soledad Guzmán Paredes",
+            "Academic Level": "4° Medio",
+            "isEnrolled": false
+        }
+    ]
+}
