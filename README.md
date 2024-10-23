@@ -1,29 +1,7 @@
-# avance_3
+# Descripción de Rama
 
-This template should help get you started developing with Vue 3 in Vite.
+La rama surge como medida de recuperación de código al haber enfrentado un merge inesperado en la rama original. Se preserva código de Sebastián Ávila.
 
-## Recommended IDE Setup
+## Commits
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+Al ser una rama fresca, los commits no han sido preservados desde la rama anterior. Para revisar el historial de versiones, por favor referirse a la rama Avance3_DocenteDev.
