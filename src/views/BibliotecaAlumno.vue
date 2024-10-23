@@ -1,161 +1,83 @@
 <template>
     <body class="principal-alumno-body">
-    <HeaderAlumno/>
-    <main>
+      <HeaderAlumno/>
+      <main>
         <div class="library-card">
-            <div class="top-left-icon">
-                <router-link to="/Cursos">
-                    <img src="../assets/return.png" alt="Regresar">
-                </router-link>
-            </div>
-            <div class="title-section">
-                <h1>Biblioteca Virtual</h1>
-            </div>
-            
-            <div class="content-sections">
-                <div class="new-entries">
-                    <h2>Nuevas Entradas</h2>
-                    <div class="entry-grid">
-                        <div class="entry-item">
-                            <img src="../assets/farenheit.png" alt="Entrada 1">
-                            <div class="entry-info">
-                                <p><strong>Farenheit 451</strong></p>
-                                <p>Ray Bradbury</p>
-                                <div class="entry-actions">
-                                    <a href="\src\assets\Ray Bradbury - Fahrenheit 451.pdf" download="Fahrenheit 451.pdf">
-                                        <img src="../assets/pdf-file.png" alt="icono pdf">
-                                        <p><strong>Descargar PDF</strong></p>
-                                    </a>
-                                    <a href="\src\assets\Ray Bradbury - Fahrenheit 451.pdf" target="_blank" rel="noopener noreferrer">
-                                        <img src="../assets/fileread.png" alt="icono leer archivo">
-                                        <p><strong>Leer Entrada</strong></p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="entry-item">
-                            <img src="../assets/colmilloblanco.png" alt="Entrada 2">
-                            <div class="entry-info">
-                                <p><strong>Colmillo Blanco</strong></p>
-                                <p>Jack London</p>
-                                <div class="entry-actions">
-                                    <a href="\src\assets\London, Jack - Colmillo blanco.pdf" download="Colmillo Blanco.pdf">
-                                        <img src="../assets/pdf-file.png" alt="icono pdf">
-                                        <p><strong>Descargar PDF</strong></p>
-                                    </a>
-                                    <a href="\src\assets\London, Jack - Colmillo blanco.pdf" target="_blank" rel="noopener noreferrer">
-                                        <img src="../assets/fileread.png" alt="icono leer archivo">
-                                        <p><strong>Leer Entrada</strong></p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="entry-item">
-                            <img src="../assets/unmundofeliz.png" alt="Entrada 3">
-                            <div class="entry-info">
-                                <p><strong>Un Mundo Feliz</strong></p>
-                                <p>Aldous Huxley</p>
-                                <div class="entry-actions">
-                                    <a href="\src\assets\Aldous HGuxley Un mundo Feliz.pdf" download="Un Mundo Feliz.pdf">
-                                        <img src="../assets/pdf-file.png" alt="icono pdf">
-                                        <p><strong>Descargar PDF</strong></p>
-                                    </a>
-                                    <a href="\src\assets\Aldous HGuxley Un mundo Feliz.pdf" target="_blank" rel="noopener noreferrer">
-                                        <img src="../assets/fileread.png" alt="icono leer archivo">
-                                        <p><strong>Leer Entrada</strong></p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+          <div class="top-left-icon">
+            <router-link to="/Cursos">
+              <img src="../assets/return.png" alt="Regresar">
+            </router-link>
+          </div>
+          <div class="title-section">
+            <h1>Biblioteca Virtual</h1>
+          </div>
+          
+          <div class="content-sections">
+            <div class="new-entries">
+              <div class="entry-grid">
+                <div v-for="book in filteredBooks" :key="book.id" class="entry-item">
+                  <img :src="book.image" :alt="'Entrada ' + book.id">
+                  <div class="entry-info">
+                    <p><strong>{{ book.title }}</strong></p>
+                    <p>{{ book.author }}</p>
+                    <div class="entry-actions">
+                      <a :href="book.pdfPath" :download="book.downloadName">
+                        <img src="../assets/pdf-file.png" alt="icono pdf">
+                        <p><strong>Descargar PDF</strong></p>
+                      </a>
+                      <a :href="book.pdfPath" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/fileread.png" alt="icono leer archivo">
+                        <p><strong>Leer Entrada</strong></p>
+                      </a>
                     </div>
+                  </div>
                 </div>
-
-                <div class="divider"></div>
-
-                <div class="subject-section">
-                    <h2>Historia, Geografía y Ciencias Sociales</h2>
-                    <div class="entry-grid">
-                        <div class="entry-item">
-                            <img src="../assets/frankenstein.png" alt="Entrada 4">
-                            <div class="entry-info">
-                                <p><strong>Frankenstein</strong></p>
-                                <p>Mary Shelley</p>
-                                <div class="entry-actions">
-                                    <a href="\src\assets\Frankenstein.pdf" download="Frankenstein.pdf">
-                                        <img src="../assets/pdf-file.png" alt="icono pdf">
-                                        <p><strong>Descargar PDF</strong></p>
-                                    </a>
-                                    <a href="\src\assets\Frankenstein.pdf" target="_blank" rel="noopener noreferrer">
-                                        <img src="../assets/fileread.png" alt="icono leer archivo">
-                                        <p><strong>Leer Entrada</strong></p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="entry-item">
-                            <img src="../assets/Donquijote.png" alt="Entrada 5">
-                            <div class="entry-info">
-                                <p><strong>Don Quijote de la Mancha</strong></p>
-                                <p>Miguel de Cervantes</p>
-                                <div class="entry-actions">
-                                    <a href="src\assets\Miguel de Cervantes El Ingenioso Hidalgo Don Quijote de la Mancha.pdf" download="Don Quijote de la Mancha.pdf">
-                                        <img src="../assets/pdf-file.png" alt="icono pdf">
-                                        <p><strong>Descargar PDF</strong></p>
-                                    </a>
-                                    <a href="src\assets\Miguel de Cervantes El Ingenioso Hidalgo Don Quijote de la Mancha.pdf" target="_blank" rel="noopener noreferrer">
-                                        <img src="../assets/fileread.png" alt="icono leer archivo">
-                                        <p><strong>Leer Entrada</strong></p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="entry-item">
-                            <img src="../assets/dracula.png" alt="Entrada 6">
-                            <div class="entry-info">
-                                <p><strong>Dracula</strong></p>
-                                <p>Bram Stoker</p>
-                                <div class="entry-actions">
-                                    <a href="\src\assets\Dracula - Bram Stoker.pdf" download="Dracula.pdf">
-                                        <img src="../assets/pdf-file.png" alt="icono pdf">
-                                        <p><strong>Descargar PDF</strong></p>
-                                    </a>
-                                    <a href="\src\assets\Dracula - Bram Stoker.pdf" target="_blank" rel="noopener noreferrer">
-                                        <img src="../assets/fileread.png" alt="icono leer archivo">
-                                        <p><strong>Leer Entrada</strong></p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="filter-column">
-                    <h2>Filtrar</h2>
-                    <ul class="filter-options">
-                        <li>Geografía</li>
-                        <li>Ciencias</li>
-                        <li>Historia</li>
-                        <li>Literatura</li>
-                        <li>Matemáticas</li>
-                    </ul>
-                </div>
+              </div>
             </div>
+  
+            <div class="divider"></div>
+  
+            <div class="filter-column">
+              <h2>Filtrar</h2>
+              <ul class="filter-options">
+                <li @click="filterByType('')" :class="{active: currentFilter === ''}"><strong>Todos</strong></li>
+                <li v-for="type in types" :key="type" @click="filterByType(type)" :class="{active: currentFilter === type}">{{ type }}</li>
+              </ul>
+            </div>
+          </div>
         </div>
-    </main>
-
-    <footer>
+      </main>
+  
+      <footer>
         <div class="rectangle-container">
-            <div class="triangle-right"></div>
+          <div class="triangle-right"></div>
         </div>
-    </footer>
-     </body>
-</template>
+      </footer>
+    </body>
+  </template>
 
 <script setup>
+import { ref, computed, onMounted } from 'vue';
 import HeaderAlumno from '../components/HeaderAlumno.vue';
+import database from '../database.json'; 
 
+const books = ref([]);
+const types = ref(["Estudiantil", "Lectura Casual", "Estudio"]);
+const currentFilter = ref('');
+
+onMounted(() => {
+  books.value = database.books;
+});
+
+const filterByType = (type) => {
+  currentFilter.value = type;
+};
+
+const filteredBooks = computed(() => {
+  if (!currentFilter.value) return books.value;
+  return books.value.filter(book => book.type === currentFilter.value);
+});
 </script>
-
 <style scoped>
 .library-card {
     width: 80%;

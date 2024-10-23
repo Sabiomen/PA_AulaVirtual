@@ -114,5 +114,62 @@
             "respuesta8" :"D) 30",
             "returnCurso" :"/Cursos/Ingles"
         }
-    ]
+    ],
+    "books": [
+        {
+          "id": 1,
+          "title": "Farenheit 451",
+          "author": "Ray Bradbury",
+          "image": "src/assets/farenheit.png",
+          "pdfPath": "/src/assets/Ray Bradbury - Fahrenheit 451.pdf",
+          "downloadName": "Fahrenheit 451.pdf",
+          "type": "Lectura Casual"
+        },
+        {
+          "id": 2,
+          "title": "Colmillo Blanco",
+          "author": "Jack London",
+          "image": "src/assets/colmilloblanco.png",
+          "pdfPath": "/src/assets/London, Jack - Colmillo blanco.pdf",
+          "downloadName": "Colmillo Blanco.pdf",
+          "type": "Estudio"
+        },
+        {
+          "id": 3,
+          "title": "Un Mundo Feliz",
+          "author": "Aldous Huxley",
+          "image": "src/assets/unmundofeliz.png",
+          "pdfPath": "/src/assets/Aldous HGuxley Un mundo Feliz.pdf",
+          "downloadName": "Un Mundo Feliz.pdf",
+          "type": "Lectura Casual"
+        },
+        {
+          "id": 4,
+          "title": "Frankenstein",
+            "author": "Mary Shelley",
+            "image": "src/assets/frankenstein.png",
+            "pdfPath": "/src/assets/Frankenstein.pdf",
+            "downloadName": "Frankenstein.pdf",
+            "type": "Estudio"
+        },
+        {
+          "id": 5,
+          "title": "Don Quijote de la Mancha",
+          "author": "Miguel de Cervantes",
+          "image": "src/assets/Donquijote.png",
+          "pdfPath": "/src/assets/Miguel de Cervantes El Ingenioso Hidalgo Don Quijote de la Mancha.pdf",
+          "downloadName": "Don Quijote de la Mancha.pdf",
+          "type": "Estudio"
+        },
+        {
+          "id": 6,
+          "title": "Dracula",
+          "author": "Bram Stoker",
+          "image": "src/assets/dracula.png",
+          "pdfPath": "/src/assets/Dracula - Bram Stoker.pdf",
+          "downloadName": "Dracula.pdf",
+          "type": "Estudio"
+        }
+      ]
+
 }

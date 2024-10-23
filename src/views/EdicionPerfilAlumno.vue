@@ -5,7 +5,7 @@
         <div class="edit-profile-card">
           <div class="edit-profile-header">
             <div class="left-section">
-              <img :src="profileImage" alt="Foto de Perfil" class="edit-profile-picture" />
+              <img :src="currentUser.profileImage" alt="Foto de Perfil" class="edit-profile-picture" />
               <div class="profile-upload">
                 <input type="file" @change="handleFileUpload" class="upload-input" />
                 <div class="small-icon">
@@ -35,66 +35,50 @@
   </template>
   
   <script setup>
+  import { useAuth } from '../useAuth.js';
   import HeaderAlumno from '../components/HeaderAlumno.vue';
   import { ref } from 'vue';
-  import database from '../database.json';
   
-  const activeUserId = 1;
-  const activeUser = database.alumns.find(user => user.id === activeUserId);
-  const profileImage = ref(activeUser ? activeUser.profileImage : '../assets/default-profile.jpg');
-  
-  const newPassword = ref('');
-  const confirmPassword = ref('');
+  const { currentUser } = useAuth();
+  let newPassword = ref('');
+  let confirmPassword = ref('');
   let uploadedFile = null;
   
   function handleFileUpload(event) {
     const file = event.target.files[0];
     if (file) {
       uploadedFile = file;
-      profileImage.value = URL.createObjectURL(file);
+      currentUser.profileImage = URL.createObjectURL(file);
     }
   }
   
   function discardChanges() {
-    profileImage.value = activeUser.profileImage;
+    currentUser.profileImage = currentUser.profileImage;
     newPassword.value = '';
     confirmPassword.value = '';
     uploadedFile = null;
   }
-
-  async function saveChanges() {
+  
+  function saveChanges() {
     if (newPassword.value && newPassword.value !== confirmPassword.value) {
       alert('Las contraseñas no coinciden');
       return;
     }
   
-    const formData = new FormData();
-    if (uploadedFile) {
-      formData.append('profileImage', uploadedFile);
-    }
-  
-    const updateData = {};
     if (newPassword.value) {
       if (newPassword.value.length >= 6 && newPassword.value.length <= 50) {
-        updateData.password = newPassword.value;
+        currentUser.password = newPassword.value;
       } else {
         alert('La contraseña debe tener entre 6 y 50 caracteres');
         return;
       }
     }
   
-    try {
-      console.log("Simulando envío para actualizar datos del usuario.");
-      console.log({
-        ...updateData,
-        profileImage: uploadedFile ? `/src/assets/${uploadedFile.name}` : activeUser.profileImage
-      });
-  
-      activeUser.profileImage = profileImage.value;
-      alert('Cambios guardados correctamente');
-    } catch (error) {
-      console.error('Error al guardar los cambios:', error);
+    if (uploadedFile) {
+      console.log("Imagen actualizada:", uploadedFile.name);
     }
+  
+    alert('Cambios guardados correctamente');
   }
   </script>
   

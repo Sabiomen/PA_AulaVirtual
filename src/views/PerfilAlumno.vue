@@ -4,18 +4,18 @@
       <main>
         <div class="profile-card">
           <div class="profile-header">
-            <img :src="profileImage" alt="Foto de Perfil" class="profile-picture" />
+            <img :src="currentUser.profileImage" alt="Foto de Perfil" class="profile-picture" />
             <div class="profile-info">
               <div class="info-row">
-                <strong>{{student.name}}</strong>
+                <strong>{{ currentUser.name }}</strong>
               </div>
               <div class="info-row">
                 <img src="../assets/graduation-cap.png" alt="Icono rol usuario" class="profile-little-icon" />
-                {{student.role}}
+                {{ currentUser.role }}
               </div>
               <div class="info-row">
                 <img src="../assets/book-and-pencil.png" alt="Icono nivel educativo" class="profile-little-icon" />
-                {{student.grade}}
+                {{ currentUser.grade }}
               </div>
             </div>
             <router-link to="/Perfil/Editar" class="edit-icon">
@@ -44,13 +44,10 @@
   
   <script setup>
   import HeaderAlumno from '../components/HeaderAlumno.vue';
+  import { useAuth } from '../useAuth.js';
   import database from '../database.json';
   
-  const studentId = 1; 
-  const student = database.alumns.find(alumn => alumn.id === studentId);
-  const profileImage = student ? student.profileImage : '../assets/default-profile.jpg';
-  
-
+  const { currentUser } = useAuth();
   const courses = database.courses;
   </script>
 

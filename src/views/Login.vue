@@ -13,7 +13,7 @@
 
     <main class="login-main">  
       <h1>Login</h1>
-      <form @submit="validarLogin">
+      <form @submit.prevent="handleLogin">
         <div class="form-group">
           <h2>RUT</h2>
           <div class="input-container">
@@ -38,32 +38,24 @@
   </body>
 </template>
 
-<script>
-import database from '../database.json';
+<script setup>
+import { ref } from 'vue';
+import { useAuth } from '../useAuth.js';
+import { useRouter } from 'vue-router';
 
-export default {
-  name: 'Login',
-  data() {
-    return {
-      rut: '',
-      password: ''
-    };
-  },
-  methods: {
-    validarLogin(event) {
-      event.preventDefault();
+const { login } = useAuth();
+const router = useRouter();
 
-      const user = database.alumns.find(alumn => alumn.rut === this.rut && alumn.password === this.password);
+const rut = ref('');
+const password = ref('');
 
-      if (user) {
-        this.$router.push('/Cursos');
-      } else {
-        alert('RUT o contraseña incorrectos');
-      }
-
-    }
+function handleLogin() {
+  if (login(rut.value, password.value)) {
+    router.push('/Cursos');
+  } else {
+    alert('RUT o contraseña incorrectos');
   }
-};
+}
 </script>
 
 <style scoped>
