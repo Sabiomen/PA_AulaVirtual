@@ -2,7 +2,7 @@
     <div class="general__container">
         <div class="header__container">
             <div class="logo__container">
-                <RouterLink to="/"><img class="logo" src="../assets/logo.png"></RouterLink>
+                <RouterLink to="/PrincipalDocente"><img class="logo" src="../assets/logo.png"></RouterLink>
             </div>
             <div class="buttons__container">
                 <RouterLink to="/GestionTextosDocente">Biblioteca</RouterLink>

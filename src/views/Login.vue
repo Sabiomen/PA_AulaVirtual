@@ -55,7 +55,7 @@ async function handleLogin() {
       if (user.role === 'Docente') {
         router.push('/PrincipalDocente');
       } else if (user.role === 'Alumno') {
-        router.push('/PrincipalAlumno');
+        router.push('/Cursos');
       } else {
         alert('Rol de usuario no reconocido');
       }
