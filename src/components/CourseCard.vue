@@ -4,7 +4,7 @@
             <RouterLink :to="`/GestionAlumnosDocente/${level}`">
                 <img src="../assets/userManagement.png" alt="course-inscription" class="course__icon" />
             </RouterLink>
-            <RouterLink to="/GestionCursoDocente">
+            <RouterLink :to="`/GestionCursoDocente/${courseid}`">
                 <img src="../assets/settings.png" alt="course-settings" class="course__icon" />
             </RouterLink>
         </div>

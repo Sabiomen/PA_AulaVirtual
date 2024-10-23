@@ -33,13 +33,17 @@ onMounted(() => {
 </script>
 
 <style scoped>
-
 .add__element {
     width: 50px;
     height: 50px;
     position: fixed;
     left: 50px;
     cursor: pointer;
+    transition: transform 0.12s ease;
+}
+
+.add__element:hover {
+    transform: scale(1.1);
 }
 
 .courselist__container {

@@ -21,7 +21,7 @@ const router = createRouter({
             component: Home
         },
         {
-            path:'/AñadirArchivoDocente',
+            path: '/AñadirArchivoDocente',
             component: AñadirArchivoDocente
         },
         {
@@ -48,8 +48,9 @@ const router = createRouter({
 
         },
         {
-            path: '/GestionCursoDocente',
-            component: GestionCursoDocente
+            path: '/GestionCursoDocente/:courseid',
+            name: 'GestionCursoDocente',
+            component: () => import('../views/GestionCursoDocente.vue'),
         },
         {
             path: '/GestionFormularioDocente',
