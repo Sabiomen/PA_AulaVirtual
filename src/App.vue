@@ -1,3 +1,4 @@
+
 <template>
     <RouterView />
 </template>
@@ -9,5 +10,5 @@ import { RouterLink, RouterView } from 'vue-router'
 <style>
     body {
         font-family: "Poppins", sans-serif;
-    }
+   }
 </style>

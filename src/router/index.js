@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+
 import Home from '../views/PrincipalDocente.vue'
 import AñadirArchivoDocente from '../views/AñadirArchivoDocente.vue'
 import AñadirVideoDocente from '../views/AñadirVideoDocente.vue'
@@ -16,9 +17,46 @@ import VistaCursoDocente from '../views/VistaCursoDocente.vue'
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
+      {
+        path: '/',
+        name: 'Login',
+        component: () => import('../views/Login.vue'),
+      },
+      {
+        path: '/Cursos',
+        name: 'Cursos',
+        component: () => import('../views/PrincipalAlumno.vue'),
+      },
+      {
+        path: '/Cursos/:courseName',
+        name: 'CourseDetail',
+        component: () => import('../components/AsignaturaAlumno.vue'),
+        props: route => ({ courseName: route.params.courseName }),
+      },
+      {
+        path: '/Perfil',
+        name: 'Perfil',
+        component: () => import('../views/PerfilAlumno.vue'),
+        },
         {
-            path: '/',
-            component: Home
+          path: '/Perfil/Editar',
+          name: 'Editar',
+          component: () => import('../views/EdicionPerfilAlumno.vue'),
+        },
+        {
+          path: '/Biblioteca',
+          name: 'Biblioteca',
+          component: () => import('../views/BibliotecaAlumno.vue'),
+        },
+        {
+          path: '/Pendientes',
+          name: 'Pendientes',
+          component: () => import('../views/PendientesAlumno.vue'),
+        },
+        {
+          path: '/Cursos/:courseName/Taller',
+          name: 'TallerCurso',
+          component: () => import('../components/FormularioBase.vue'),
         },
         {
             path:'/AñadirArchivoDocente',
