@@ -1,31 +1,31 @@
 <template>
-    <div class="course-card">
-      <div class="course-header">
-        <router-link to="/Cursos" class="back-button">
-          <img src="../assets/return.png" alt="Volver">
-        </router-link>
-        <div class="class-logo">
-          <img :src="courseImage" alt="Logo de la clase">
-        </div>
-        <div class="class-info">
-          <h2>{{ courseName }}</h2>
-          <p>Prof. {{ professorName }}</p>
-        </div>
+<HeaderAlumno />
+<div v-if="courseData" class="course-card">
+    <div class="course-header">
+      <router-link to="/Cursos" class="back-button">
+        <img src="../assets/return.png" alt="Volver" />
+      </router-link>
+      <div class="class-logo">
+        <img :src="courseData.courseImage" alt="Logo de la clase" />
       </div>
+      <div class="class-info">
+        <h2>{{ courseData.courseName }}</h2>
+        <p>Prof. {{ courseData.professorName }}</p>
+      </div>
+    </div>
       <div class="course-content">
         <div class="left-column">
           <h3>Contenidos del Curso</h3>
           <div class="content-section">
-            <router-link :to="workshop" class="content-icon">
+            <router-link :to="{ name: 'TallerCurso', params: { courseName } }" class="content-icon">
               <img src="../assets/survey.png" alt="Icono contenido">
-            
             <div class="content-text">
               <p>Cuestionario Diagnostico</p>
             </div>
           </router-link>
           </div>
           <div class="content-section">
-            <a :href="url" :download="pdfFile">
+            <a :href="courseData.url" :download="courseData.pdfFile">
               <div class="content-icon">
                 <img src="../assets/pdf-file.png" alt="Icono contenido">
               </div>
@@ -35,7 +35,7 @@
             </a>
           </div>
           <div class="content-section">
-            <a :href="url2" target="_blank" rel="noopener noreferrer">
+            <a :href="courseData.url" target="_blank" rel="noopener noreferrer">
               <div class="content-icon">
                 <img src="../assets/external-link.png" alt="Icono contenido">
               </div>
@@ -45,7 +45,7 @@
             </a>
           </div>
           <div class="content-section">
-            <router-link :to="workshop" class="content-icon">
+            <router-link :to="{ name: 'TallerCurso', params: { courseName } }" class="content-icon">
                 <img src="../assets/survey.png" alt="Icono contenido">
               <div class="content-text">
                 <p>Cuestionario Reforzamiento</p>
@@ -54,7 +54,7 @@
           </div>
           <div class="content-section">
             <div class="content-icon">
-              <a :href="externalUrl" target="_blank" rel="noopener noreferrer">
+              <a :href="courseData.externalUrl" target="_blank" rel="noopener noreferrer">
                 <div class="content-icon">
                   <img src="../assets/external-link.png" alt="Icono contenido">
                 </div>
@@ -65,7 +65,7 @@
             </div>
           </div>
           <div class="content-section">
-            <router-link :to="workshop" class="content-icon">
+            <router-link :to="courseData.workshop" class="content-icon">
               <img src="../assets/survey.png" alt="Icono contenido">
             <div class="content-text">
               <p>Prueba Teorica 1</p>
@@ -126,46 +126,31 @@
             </div>
         </div>
       </div>
+      
     </div>
+    <div v-else>
+    <p>No se pudo cargar la información de la asignatura.</p>
+  </div>
+  <footer>
+        <div class="rectangle-container">
+            <div class="triangle-right"></div>
+        </div>
+    </footer>
   </template>
   
   <script setup>
-    import { defineProps } from 'vue'
-    import { RouterLink } from 'vue-router'
-  const props = defineProps({
-    courseName: {
-      type: String,
-      required: true
-    },
-    professorName: {
-      type: String,
-      required: true
-    },
-    courseImage: {
-      type: String,
-      required: true
-    },
-    workshop:{
-      type: String,
-      required: true
-    },
-    url:{
-      type: String,
-      required: true
-    },
-    pdfFile:{
-      type: String,
-      required: true
-    },
-    url2:{
-      type: String,
-      required: true
-    },
-    externalUrl:{
-      type: String,
-      required: true
-    }
-  })
+  import { computed } from 'vue';
+  import database from '../database.json';
+  import { useRoute } from 'vue-router';
+  import HeaderAlumno from '../components/HeaderAlumno.vue'
+  
+  const route = useRoute();
+  
+  const courseData = computed(() => {
+    return database.courses.find(
+      course => course.courseName === route.params.courseName
+    );
+  });
   </script>
   
   <style scoped>

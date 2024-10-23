@@ -1,62 +1,33 @@
 <template>
-
-<body class="principal-alumno-body">
-
-    <HeaderAlumno/>
-
+  <body class="principal-alumno-body">
+    <HeaderAlumno />
     <main class="principal-alumno-main">
-
-<router-link to="/Cursos/Historia" class="class-card">
-  <img src="../assets/course-1.png" alt="Logo Clase 1">
-  <div class="class-info">
-    <h2>Historia y Geografía</h2>
-    <p>Prof. Erica Worthington</p>
-    <p>2° Medio</p>
-  </div>
-</router-link>
-
-<router-link to="/Cursos/Matematica" class="class-card">
-  <img src="../assets/course-2alt.png" alt="Logo Clase 2">
-  <div class="class-info">
-    <h2>Matematica y Estadistica</h2>
-    <p>Prof. Richard Hanson</p>
-    <p>2° Medio</p>
-  </div>
-</router-link>
-
-<router-link to="/Cursos/Ciencias" class="class-card">
-  <img src="../assets/course-3.png" alt="Logo Clase 3">
-  <div class="class-info">
-    <h2>Ciencias Sociales</h2>
-    <p>Prof. Frederick Fitzgerald Fazbearington</p>
-    <p>2° Medio</p>
-  </div>
-</router-link>
-
-<router-link to="Cursos/Ingles" class="class-card">
-  <img src="../assets/course-4.png" alt="Logo Clase 4">
-  <div class="class-info">
-    <h2>Ingles</h2>
-    <p>Prof. Chelsey Addams</p>
-    <p>2° Medio</p>
-  </div>
-</router-link>
-
-</main>
-
-<footer>
-<div class="rectangle-container">
-    <div class="triangle-right"></div>
-</div>
-</footer>
-
-</body>
-
+      <router-link
+        v-for="(course, index) in courses"
+        :key="index"
+        :to="{ name: 'CourseDetail', params: { courseName: course.courseName } }"
+        class="class-card"
+      >
+        <img :src="course.courseImage" :alt="'Logo ' + course.courseName" />
+        <div class="class-info">
+          <h2>{{ course.courseName }}</h2>
+          <p>Prof. {{ course.professorName }}</p>
+          <p>2° Medio</p>
+        </div>
+      </router-link>
+    </main>
+    <footer>
+      <div class="rectangle-container">
+        <div class="triangle-right"></div>
+      </div>
+    </footer>
+  </body>
 </template>
 
 <script setup>
 import HeaderAlumno from '../components/HeaderAlumno.vue';
-
+import database from '../database.json';
+const courses = database.courses;
 
 </script>
 

@@ -1,30 +1,32 @@
 <template>
-      <header>
-        
-        <router-link to="/Cursos" class="logo">
+    <header>
+      <router-link to="/Cursos" class="logo">
         <img src="../assets/logo_forlife.png" alt="Logo Escuela For Life">
-        </router-link>
-
-        <nav class="nav-links">
-            <RouterLink to="/Biblioteca"><strong>Biblioteca </strong></RouterLink>
-            <RouterLink to="/Pendientes"><strong>Pendientes</strong></RouterLink>
-        </nav>
-
-        <router-link to="/Perfil" class="profile-section">
-        <img src="../assets/hagger.jpg" class="profile-icon" alt="Foto de Perfil">
-        </router-link>
-
-        <router-link to="/" class="logout-section">
+      </router-link>
+      <nav class="nav-links">
+        <RouterLink to="/Biblioteca"><strong>Biblioteca </strong></RouterLink>
+        <RouterLink to="/Pendientes"><strong>Pendientes</strong></RouterLink>
+      </nav>
+      <router-link to="/Perfil" class="profile-section">
+        <img :src="activeUserProfileImage" class="profile-icon" alt="Foto de Perfil" />
+      </router-link>
+      <router-link to="/" class="logout-section">
         <img src="../assets/logout.png" class="logout-icon" alt="Icono Logout">
-        </router-link>
-
-        </header>
-
-</template>
-
+      </router-link>
+    </header>
+  </template>
+  
 <script setup>
-import { RouterLink } from 'vue-router'
+import { ref } from 'vue';
+import database from '../database.json';
+
+const activeUserId = 1;
+
+const activeUser = database.alumns.find(user => user.id === activeUserId);
+
+const activeUserProfileImage = ref(activeUser ? activeUser.profileImage : '../assets/default-profile.jpg');
 </script>
+
 
 <style>
 

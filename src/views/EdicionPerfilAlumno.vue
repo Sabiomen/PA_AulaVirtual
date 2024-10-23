@@ -1,51 +1,103 @@
 <template>
- <body class="principal-alumno-body">
-
-    <HeaderAlumno/>
-
-    <main>
+    <body class="principal-alumno-body">
+      <HeaderAlumno />
+      <main>
         <div class="edit-profile-card">
-            <div class="edit-profile-header">
-                <div class="left-section">
-                    <img src="../assets/hagger.jpg" alt="Foto de Perfil" class="edit-profile-picture">
-                    <div class="profile-upload">
-                        <button class="upload-photo-button">Subir Foto</button>
-                        <div class="small-icon">
-                            <img src="../assets/edit-image.png" alt="Icono pequeño">
-                        </div>
-                    </div>
+          <div class="edit-profile-header">
+            <div class="left-section">
+              <img :src="profileImage" alt="Foto de Perfil" class="edit-profile-picture" />
+              <div class="profile-upload">
+                <input type="file" @change="handleFileUpload" class="upload-input" />
+                <div class="small-icon">
+                  <img src="../assets/edit-image.png" alt="Icono pequeño" />
                 </div>
-
-                <form class="edit-form">
-                    <label for="new-password">Nueva Contraseña:</label>
-                    <input type="password" id="new-password" name="new-password" placeholder="Contraseña...">
-
-                    <label for="confirm-password">Confirmar Contraseña:</label>
-                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Contraseña...">
-                </form>
+              </div>
             </div>
-
-            <div class="form-buttons">
-                <button type="button" class="discard-button"> <router-link to="/Perfil/Editar" class="discard-button-ref">Descartar Cambios</router-link></button>
-                <button type="button" class="save-button"><router-link to="/Cursos"  class="save-button-ref">Guardar Cambios</router-link></button>
-            </div>
+            <form @submit.prevent="saveChanges" class="edit-form">
+              <label for="new-password">Nueva Contraseña:</label>
+              <input v-model="newPassword" type="password" id="new-password" placeholder="Contraseña..." />
+              <label for="confirm-password">Confirmar Contraseña:</label>
+              <input v-model="confirmPassword" type="password" id="confirm-password" placeholder="Contraseña..." />
+              <div class="form-buttons">
+                <button type="button" @click="discardChanges" class="discard-button">Descartar Cambios</button>
+                <button type="submit" class="save-button">Guardar Cambios</button>
+              </div>
+            </form>
+          </div>
         </div>
-    </main>
-<footer>
-    <div class="rectangle-container">
-        <div class="triangle-right"></div>
-    </div>
-</footer>
+      </main>
+      <footer>
+        <div class="rectangle-container">
+          <div class="triangle-right"></div>
+        </div>
+      </footer>
+    </body>
+  </template>
+  
+  <script setup>
+  import HeaderAlumno from '../components/HeaderAlumno.vue';
+  import { ref } from 'vue';
+  import database from '../database.json';
+  
+  const activeUserId = 1;
+  const activeUser = database.alumns.find(user => user.id === activeUserId);
+  const profileImage = ref(activeUser ? activeUser.profileImage : '../assets/default-profile.jpg');
+  
+  const newPassword = ref('');
+  const confirmPassword = ref('');
+  let uploadedFile = null;
+  
+  function handleFileUpload(event) {
+    const file = event.target.files[0];
+    if (file) {
+      uploadedFile = file;
+      profileImage.value = URL.createObjectURL(file);
+    }
+  }
+  
+  function discardChanges() {
+    profileImage.value = activeUser.profileImage;
+    newPassword.value = '';
+    confirmPassword.value = '';
+    uploadedFile = null;
+  }
 
- </body>
-
-</template>
-
-<script setup>
-import HeaderAlumno from '../components/HeaderAlumno.vue';
-
-
-</script>
+  async function saveChanges() {
+    if (newPassword.value && newPassword.value !== confirmPassword.value) {
+      alert('Las contraseñas no coinciden');
+      return;
+    }
+  
+    const formData = new FormData();
+    if (uploadedFile) {
+      formData.append('profileImage', uploadedFile);
+    }
+  
+    const updateData = {};
+    if (newPassword.value) {
+      if (newPassword.value.length >= 6 && newPassword.value.length <= 50) {
+        updateData.password = newPassword.value;
+      } else {
+        alert('La contraseña debe tener entre 6 y 50 caracteres');
+        return;
+      }
+    }
+  
+    try {
+      console.log("Simulando envío para actualizar datos del usuario.");
+      console.log({
+        ...updateData,
+        profileImage: uploadedFile ? `/src/assets/${uploadedFile.name}` : activeUser.profileImage
+      });
+  
+      activeUser.profileImage = profileImage.value;
+      alert('Cambios guardados correctamente');
+    } catch (error) {
+      console.error('Error al guardar los cambios:', error);
+    }
+  }
+  </script>
+  
 <style scoped>
 .edit-profile-card {
     width: 80%;
@@ -282,5 +334,6 @@ import HeaderAlumno from '../components/HeaderAlumno.vue';
 .finish-button:hover {
     background-color: #0d6efd;
 }
+
 
 </style>

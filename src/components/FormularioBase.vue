@@ -1,123 +1,68 @@
 <template>
-
-<body class="principal-alumno-body">
-
-    <HeaderAlumno/>
-
-    <main>
-        <div class="form-card">
-            <div class="top-left-icon">
-                <router-link :to="returnCurso">
-                    <img src="../assets/return.png" alt="Regresar">
-                </router-link>
+    <body class="principal-alumno-body">
+      <HeaderAlumno />
+      <main>
+        <div v-if="workshopData" class="form-card">
+          <div class="top-left-icon">
+            <router-link :to="workshopData.returnCurso">
+              <img src="../assets/return.png" alt="Regresar" />
+            </router-link>
+          </div>
+          <div class="questions-section">
+            <div class="question">
+              <p>{{ workshopData.pregunta1 }}</p>
+              <div class="options">
+                <div class="option">{{ workshopData.respuesta1 }}</div>
+                <div class="option">{{ workshopData.respuesta2 }}</div>
+                <div class="option">{{ workshopData.respuesta3 }}</div>
+                <div class="option">{{ workshopData.respuesta4 }}</div>
+              </div>
             </div>
-
-            <div class="questions-section">
-                <div class="question">
-                    <p>{{ pregunta1 }}</p>
-                    <div class="options">
-                        <div class="option">{{respuesta1}}</div>
-                        <div class="option">{{respuesta2}}</div>
-                        <div class="option">{{respuesta3}}</div>
-                        <div class="option">{{respuesta4}}</div>
-                    </div>
-                </div>
-
-                <div class="question">
-                    <p>{{ pregunta2 }}</p>
-                    <div class="options">
-                        <div class="option">{{respuesta5}}</div>
-                        <div class="option">{{respuesta6}}</div>
-                        <div class="option">{{respuesta7}}</div>
-                        <div class="option">{{respuesta8}}</div>
-                    </div>
-                </div>
+            <div class="question">
+              <p>{{ workshopData.pregunta2 }}</p>
+              <div class="options">
+                <div class="option">{{ workshopData.respuesta5 }}</div>
+                <div class="option">{{ workshopData.respuesta6 }}</div>
+                <div class="option">{{ workshopData.respuesta7 }}</div>
+                <div class="option">{{ workshopData.respuesta8 }}</div>
+              </div>
             </div>
-
-            <div class="side-section">
-                <p class="section-title">Preguntas</p>
-                <div class="question-grid">
-                    <div class="grid-item">1</div>
-                    <div class="grid-item">2</div>
-                    <div class="grid-item">3</div>
-                    <div class="grid-item">4</div>
-                    <div class="grid-item">5</div>
-                    <div class="grid-item">6</div>
-                    <div class="grid-item">7</div>
-                    <div class="grid-item">8</div>
-                    <div class="grid-item">9</div>
-                    <div class="grid-item">10</div>
-                    <div class="grid-item">11</div>
-                    <div class="grid-item">12</div>
-                </div>
-                <router-link :to="returnCurso">
-                    <button class="finish-button">Terminar</button>
-                </router-link> 
+          </div>
+          <div class="side-section">
+            <p class="section-title">Preguntas</p>
+            <div class="question-grid">
+              <div class="grid-item" v-for="n in 12" :key="n">{{ n }}</div>
             </div>
+            <router-link :to="workshopData.returnCurso">
+              <button class="finish-button">Terminar</button>
+            </router-link>
+          </div>
         </div>
-    </main>
-
-<footer>
-    <div class="rectangle-container">
-        <div class="triangle-right"></div>
-    </div>
-</footer>
-</body>
-
-</template>
+        <div v-else>
+          <p>No se pudo cargar la información del taller.</p>
+        </div>
+      </main>
+      <footer>
+        <div class="rectangle-container">
+          <div class="triangle-right"></div>
+        </div>
+      </footer>
+    </body>
+  </template>
 
 <script setup>
 import HeaderAlumno from '../components/HeaderAlumno.vue';
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
+import database from '../database.json';
 
-const props = defineProps({
-    pregunta1: {
-        type: String,
-        required: true
-    },
-    pregunta2: {
-        type: String,
-        required: true
-    },
-    respuesta1: {
-        type: String,
-        required: true
-    },
-    respuesta2: {
-        type: String,
-        required: true
-    },
-    respuesta3: {
-        type: String,
-        required: true
-    },
-    respuesta4: {
-        type: String,
-        required: true
-    },
-    respuesta5: {
-        type: String,
-        required: true
-    },
-    respuesta6: {
-        type: String,
-        required: true
-    },
-    respuesta7: {
-        type: String,
-        required: true
-    },
-    respuesta8: {
-        type: String,
-        required: true
-    },
-    returnCurso: {
-        type: String,
-        required: true
-    }
-})
-
+const route = useRoute();
+const workshopData = computed(() => {
+  return database.workshops.find(
+    workshop => workshop.workshopCourse === route.params.courseName
+  );
+});
 </script>
-
 <style scoped>
 .form-card {
     width: 70%;

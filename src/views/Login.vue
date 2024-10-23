@@ -1,74 +1,72 @@
 <template>
-    <body class="login-body">
-        <header>
-    <router-link to="/" class="logo">
+  <body class="login-body">
+    <header>
+      <router-link to="/" class="logo">
         <img src="../assets/logo_forlife.png" alt="Logo Escuela For Life">
-    </router-link>
-    
-    <router-link to="/" class="login-section">
+      </router-link>
+      
+      <router-link to="/" class="login-section">
         <span><strong>Login</strong></span>
         <i class="login-icon"><img src="../assets/icono.jpg" alt="Icono login"></i>
-    </router-link>
-</header>
+      </router-link>
+    </header>
 
     <main class="login-main">  
-        <h1>Login</h1>
-        <form @submit="validarLogin">
-      <div class="form-group">
-        <h2>RUT</h2>
-        <div class="input-container">
-          <input type="text" id="rut" v-model="rut" name="rut" placeholder="Ingresa tu RUT" required>
+      <h1>Login</h1>
+      <form @submit="validarLogin">
+        <div class="form-group">
+          <h2>RUT</h2>
+          <div class="input-container">
+            <input type="text" id="rut" v-model="rut" name="rut" placeholder="Ingresa tu RUT" required>
+          </div>
         </div>
-      </div>
-      <div class="form-group">
-        <h2>Contraseña</h2>
-        <div class="input-container">
-          <input type="password" id="password" v-model="password" name="password" placeholder="Ingresa tu contraseña" required>
+        <div class="form-group">
+          <h2>Contraseña</h2>
+          <div class="input-container">
+            <input type="password" id="password" v-model="password" name="password" placeholder="Ingresa tu contraseña" required>
+          </div>
         </div>
-      </div>
-      <button type="submit">Entrar</button>
-    </form>
+        <button type="submit">Entrar</button>
+      </form>
     </main>
     
-<footer>
-    <div class="rectangle-container">
+    <footer>
+      <div class="rectangle-container">
         <div class="triangle-right"></div>
-    </div>
-</footer>
-</body>
-
-
+      </div>
+    </footer>
+  </body>
 </template>
 
 <script>
+import database from '../database.json';
+
 export default {
   name: 'Login',
   data() {
     return {
-      rut: '',         
-      password: ''     
+      rut: '',
+      password: ''
     };
   },
   methods: {
     validarLogin(event) {
-      event.preventDefault(); 
+      event.preventDefault();
 
-      const rut = this.rut;
-      const password = this.password;
-      
-      if (rut === '214001091' && password === '214001091') {
-        this.$router.push('/Cursos'); 
-      } else if (rut === '7879439635' && password === '7879439635') {
-        this.$router.push('/CursosDocente'); 
+      const user = database.alumns.find(alumn => alumn.rut === this.rut && alumn.password === this.password);
+
+      if (user) {
+        this.$router.push('/Cursos');
       } else {
         alert('RUT o contraseña incorrectos');
       }
+
     }
   }
 };
 </script>
-<style scoped>
 
+<style scoped>
 
 .login-body {
     background-color: white;

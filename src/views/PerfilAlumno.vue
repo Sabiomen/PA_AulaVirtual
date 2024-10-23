@@ -1,57 +1,58 @@
 <template>
-<body class="principal-alumno-body">
-    <HeaderAlumno/>
-    <main>
+    <body class="principal-alumno-body">
+      <HeaderAlumno />
+      <main>
         <div class="profile-card">
-            <div class="profile-header">
-                <img src="../assets/hagger.jpg" alt="Foto de Perfil" class="profile-picture">
-                <div class="profile-info">
-                    <div class="info-row">
-                        <strong>Alejandro David Prieto Moreno</strong>
-                    </div>
-                    <div class="info-row">
-                        <img src="../assets/graduation-cap.png" alt="Icono rol usuario" class="profile-little-icon">
-                        Alumno
-                    </div>
-                    <div class="info-row">
-                        <img src="../assets/book-and-pencil.png" alt="Icono nivel educativo" class="profile-little-icon">
-                        2° Medio
-                    </div>
-                </div>
-
-                <router-link to="/Perfil/Editar" class="edit-icon">
-                    <img src="../assets/settings.png" alt="Icono Edicion">
+          <div class="profile-header">
+            <img :src="profileImage" alt="Foto de Perfil" class="profile-picture" />
+            <div class="profile-info">
+              <div class="info-row">
+                <strong>{{student.name}}</strong>
+              </div>
+              <div class="info-row">
+                <img src="../assets/graduation-cap.png" alt="Icono rol usuario" class="profile-little-icon" />
+                {{student.role}}
+              </div>
+              <div class="info-row">
+                <img src="../assets/book-and-pencil.png" alt="Icono nivel educativo" class="profile-little-icon" />
+                {{student.grade}}
+              </div>
+            </div>
+            <router-link to="/Perfil/Editar" class="edit-icon">
+              <img src="../assets/settings.png" alt="Icono Edicion" />
+            </router-link>
+          </div>
+          <div class="enrolled-subjects">
+            <h2>Asignaturas Cursadas</h2>
+            <ul>
+              <li v-for="(course, index) in courses" :key="index">
+                <router-link :to="{ name: 'CourseDetail', params: { courseName: course.courseName } }">
+                  {{ course.courseName }}
                 </router-link>
-            </div>
-
-            <div class="enrolled-subjects">
-                <h2>Asignaturas Cursadas</h2>
-                <ul>
-                    <router-link to="/Cursos/Historia"><li>Historia y Geografía</li></router-link>
-                    <router-link to="/Cursos/Matematica"><li>Matematica y Estadistica</li></router-link>
-                    <router-link to="/Cursos/Ciencias"><li>Ciencias Sociales</li></router-link>
-                    <router-link to="/Cursos/Ingles"><li>Ingles</li></router-link>
-                </ul>
-            </div>
+              </li>
+            </ul>
+          </div>
         </div>
-    </main>
+      </main>
+      <footer>
+        <div class="rectangle-container">
+          <div class="triangle-right"></div>
+        </div>
+      </footer>
+    </body>
+  </template>
+  
+  <script setup>
+  import HeaderAlumno from '../components/HeaderAlumno.vue';
+  import database from '../database.json';
+  
+  const studentId = 1; 
+  const student = database.alumns.find(alumn => alumn.id === studentId);
+  const profileImage = student ? student.profileImage : '../assets/default-profile.jpg';
+  
 
-
-<footer>
-    <div class="rectangle-container">
-        <div class="triangle-right"></div>
-    </div>
-</footer>
-
-</body>
-
-</template>
-
-<script setup>
-import HeaderAlumno from '../components/HeaderAlumno.vue';
-
-
-</script>
+  const courses = database.courses;
+  </script>
 
 <style scoped>
 .profile-card {
