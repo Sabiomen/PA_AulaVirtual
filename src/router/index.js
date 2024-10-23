@@ -41,8 +41,11 @@ const router = createRouter({
             component: FormularioDocente
         },
         {
-            path: '/GestionAlumnosDocente',
-            component: GestionAlumnosDocente
+            path: '/GestionAlumnosDocente/:level',
+            name: 'GestionAlumnosDocente',
+            component: GestionAlumnosDocente,
+            props: true
+
         },
         {
             path: '/GestionCursoDocente',

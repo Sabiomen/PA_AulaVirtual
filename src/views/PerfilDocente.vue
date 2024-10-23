@@ -22,11 +22,10 @@
             <div class="courses__list">
                 <h3>Cursos:</h3>
                 <ul>
-                    <RouterLink to="/VistaCursoDocente">
-                        <li v-for="course in courses" :key="course.courseName">{{ course.courseName }}: {{ course.level
-                            }}
-                        </li>
-                    </RouterLink>
+                    <li v-for="course in courses" :key="course.courseName">
+                        <RouterLink :to="'/VistaCursoDocente/' + course.courseName">{{ course.courseName }}: {{
+                            course.level }}</RouterLink>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -63,7 +62,6 @@ onMounted(() => {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 
 .profile__container {
@@ -113,6 +111,11 @@ onMounted(() => {
 
 .profile__details {
     font-size: 1.4rem;
+}
+
+.profile__details p {
+    display: flex;
+
 }
 
 .paragraph__image {

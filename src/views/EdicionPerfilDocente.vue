@@ -116,7 +116,7 @@ const saveChanges = async () => {
 
 .picture__container {
     display: flex;
-    margin-top: 49px;
+    margin-top: 54px;
 
 }
 
